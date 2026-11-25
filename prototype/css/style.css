@@ -515,31 +515,52 @@ body.sub .band .section nav, body.sub .band nav.section { margin: 0; }
 .wiz-form .feld { display: contents; }
 .wiz-info .vorschlag { font-size: 1.02rem; }
 
-/* ---------- Handy (25.11.2026): Blüte + Bereichsnamen füllen den ersten Bildschirm ----------
-   Die Namen rücken hochkant nach oben bzw. unten; der Bildausschnitt (viewBox) wird per Skript in index.html umgestellt. */
+/* ---------- Handy (25.11.2026): Blüte füllt die Breite, Symbol und Name stehen im eigenen Blütenblatt ----------
+   Hover gibt es auf dem Handy nicht; jedes ganze Blatt ist antippbar (petal-hl liegt im Link).
+   Der Bildausschnitt (viewBox) wird per Skript in index.html umgestellt (data-viewbox-handy). */
 @media (max-width: 699px) {
   body.home .first-screen { height: calc(100vh - 5.2rem); height: calc(100svh - 5.2rem); min-height: 520px; padding-top: 1rem; padding-bottom: .5rem; }
-  body.home .flower-wrap { position: relative; }
-  body.home .flower { position: absolute; inset: 0; width: 100%; height: 100%; }
-  .flower .marke { transition: transform .2s ease; }
-  /* Blüte größer (0.74 → 1.1), Namen als Bogen über und unter der Blüte */
-  body.home .flower .logo-navy, body.home .flower .logo-top { transform: translate(400px, 400px) scale(1.1); }
-  body.home .flower .petal-hl, body.home .flower .center-link { transform: translate(400px, 400px) scale(1.486) translate(-400px, -400px); }
-  .flower .p0 .marke { transform: translateY(-160px); }
-  .flower .p1 .marke { transform: translate(-40px, -140px); }
-  .flower .p5 .marke { transform: translate(40px, -140px); }
-  .flower .p2 .marke { transform: translate(-40px, 128px); }
-  .flower .p4 .marke { transform: translate(40px, 128px); }
-  .flower .p3 .marke { transform: translateY(128px); }
+  body.home .first-screen { justify-content: center; gap: 1rem; }
+  body.home .flower-wrap { position: static; flex: 0 0 auto; }
+  body.home .flower { position: static; width: 100%; height: auto; max-height: calc(100svh - 11rem); }
+  /* Blüte in voller Größe (0.74 → 1.0) */
+  body.home .flower .logo-navy, body.home .flower .logo-top { transform: translate(400px, 400px) scale(1); }
+  body.home .flower .petal-hl, body.home .flower .center-link { transform: translate(400px, 400px) scale(1.351) translate(-400px, -400px); }
+  /* Farbtupfer weg (dort stehen jetzt Symbol und Name); Blätter etwas heller als der Grund, zwei Blautöne im Wechsel */
+  body.home .flower .acc { display: none; }
+  body.home .flower .petal-hl { opacity: 1.0; }
+  body.home .flower .p0 .petal-hl { fill: #1E3F75; }
+  body.home .flower .p1 .petal-hl { fill: #183564; }
+  body.home .flower .p2 .petal-hl { fill: #1E3F75; }
+  body.home .flower .p3 .petal-hl { fill: #183564; }
+  body.home .flower .p4 .petal-hl { fill: #1E3F75; }
+  body.home .flower .p5 .petal-hl { fill: #183564; }
+  /* Symbole in der Farbe des Farbtupfers, der vorher in diesem Blatt stand */
+  body.home .flower .p0 .icon { stroke: var(--pink); }
+  body.home .flower .p1 .icon { stroke: var(--orange); }
+  body.home .flower .p2 .icon { stroke: var(--pink); }
+  body.home .flower .p3 .icon { stroke: var(--orange); }
+  body.home .flower .p4 .icon { stroke: var(--pink); }
+  body.home .flower .p5 .icon { stroke: var(--orange); }
+  body.home .flower .logo-navy path { stroke: #5A7DB4; stroke-width: 1.6; }
+  /* Symbol + Name in die Blattmitte (Abstand 168 von der Blütenmitte), kleiner skaliert */
+  .flower .marke { transform-box: fill-box; transform-origin: center; }
+  .flower .p0 .marke { transform: translate(0.0px, 119.0px) scale(0.68); }
+  .flower .p1 .marke { transform: translate(-118.6px, 62.5px) scale(0.68); }
+  .flower .p2 .marke { transform: translate(-118.6px, -74.5px) scale(0.68); }
+  .flower .p3 .marke { transform: translate(0.0px, -143.0px) scale(0.68); }
+  .flower .p4 .marke { transform: translate(118.6px, -74.5px) scale(0.68); }
+  .flower .p5 .marke { transform: translate(118.6px, 62.5px) scale(0.68); }
   body.home .flower .label { font-size: 30px; }
   body.home .flower .icon { stroke-width: 2.6; }
+  body.home .flower .hit { display: none; }
+  body.home .flower .petal-link:active .petal-hl { fill: #2A5294; }   /* Rückmeldung beim Antippen */
 }
-
 /* Bereichsleiste auf dem Handy: zwei Reihen à drei statt seitlich scrollen */
 @media (max-width: 760px) {
   .area-strip ul { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .25rem; overflow: visible; padding: .5rem .75rem; justify-content: stretch; }
   .area-strip a { min-width: 0; padding: .4rem .25rem; font-size: .74rem; }
-  .area-strip a span { overflow-wrap: anywhere; hyphens: auto; }
+  .area-strip a span { hyphens: manual; -webkit-hyphens: manual; }   /* nur an den weichen Trennstellen (&shy;) trennen */
 }
 
 /* Schmale Handys: Kopfzeile bleibt einzeilig */
@@ -548,3 +569,9 @@ body.sub .band .section nav, body.sub .band nav.section { margin: 0; }
   .wordmark { font-size: 1.6rem; gap: .4rem; }
   .wordmark img, .wordmark svg { width: 34px; height: 34px; }
 }
+
+/* Lange Wörter (Erwerbs-minderungs-rente) nur an den weichen Trennstellen im HTML trennen */
+.area-hero h1, .band-hero h1, .area-list a { hyphens: manual; -webkit-hyphens: manual; }
+
+/* Bereichsleiste: nie automatisch trennen, nur an &shy; (alle Breiten, auch Safari) */
+.area-strip a, .area-strip a span { hyphens: manual; -webkit-hyphens: manual; overflow-wrap: normal; word-break: normal; }
