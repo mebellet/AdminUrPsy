@@ -1,12 +1,13 @@
 # AdminUrPsy – Pilot
 
-**Anträge und Hilfe – an einem Ort.** AdminUrPsy soll Menschen mit psychischer Erkrankung helfen, die Verwaltung rund um ihre Unterstützung zu schaffen: Anträge ausfüllen, Fristen im Blick behalten, die zuständige Stelle finden. Alle persönlichen Daten bleiben auf dem eigenen Gerät.
+**Anträge und Hilfe – an einem Ort.** AdminUrPsy soll Menschen mit psychischer Erkrankung helfen, Verwaltungsaufgaben rund um die benötigte Unterstützung zu bewältigen: Über Ansprüche informieren, Anträge ausfüllen, Fristen im Blick behalten, die zuständige Stelle finden. Alle persönlichen Daten bleiben dabei auf dem eigenen Gerät.
 
-> ⚠️ **Pilotprojekt.** Dieses Repository zeigt das Design, den geplanten Aufbau und einen ersten ausgearbeiteten Schritt: den **formlosen Antrag auf Pflegegrad**. Alle anderen Bereiche sind noch Platzhalter. Fachlicher Stand ist das Recht **ab 1.1.2027** (Pflegereform: Gesetzentwurf, noch nicht beschlossen). AdminUrPsy ersetzt keine Beratung.
+> ⚠️ **Pilotprojekt.** Dieses Repository zeigt lediglich das Design, den geplanten Aufbau und einen ersten vorläufigen Schritt: den **formlosen Antrag auf Pflegegrad**. Alle anderen Bereiche sind noch Platzhalter.
+AdminUrPsy ersetzt keine Beratung.
 
 ## Ausprobieren
 
-Kein Server, keine Installation: Repository herunterladen („Code“ → „Download ZIP“), entpacken und `prototype/index.html` im Browser öffnen.
+Repository herunterladen („Code“ → „Download ZIP“), entpacken und `prototype/index.html` im Browser öffnen.
 
 Der Prototyp lädt nichts von fremden Servern (keine Schriften, keine Tracker). Eingaben werden nur im Browser gespeichert.
 
@@ -19,12 +20,12 @@ prototype/   Web-App (HTML, CSS, JavaScript – ohne Build-Schritt)
   pflege/pflegegrad-antrag.html  Antrag auf Pflegegrad (Pilot)
   js/fragebogen.js               spielt Fragebögen im SurveyJS-JSON-Format ab
   js/antrag-pflegegrad.js        Kassenwahl, Brief, PDF (pdf-lib), Merkzettel
-  js/datenpaket.js               alle Datensätze aus data/ (erzeugt, nicht von Hand ändern)
+  js/datenpaket.js               alle Datensätze aus data/ (erzeugt im Ordner code, nicht von Hand ändern)
   vendor/pdf-lib.min.js          pdf-lib 1.17.1 (MIT-Lizenz)
 data/        öffentliche Datensätze als JSON – jede Datei mit Quelle, Stand, nächster Prüfung
   kassen.json, aok-regionen.json, pflegekassen-adressen.json,
   pflegeantrag-merkmale.json, pflege-werte-2027.json, fragebogen/pflegegrad-antrag.json
-code/        Python-Skripte, die die Datensätze aus dem Internet beziehen und prüfen (siehe code/README.md)
+code/        Python-Skripte, die die Datensätze aus dem Internet beziehen und prüfen (vorläufig, siehe code/README.md)
 screenshots/ Bilder der Web-App
 ```
 
@@ -36,9 +37,9 @@ Reha und Erwerbsminderungsrente gehören zusammen, weil vor einer Rente oft erst
 
 ## Was der Pilot zeigt: Antrag auf Pflegegrad
 
-1. **Fragen statt Formular:** ein Fragebogen in einfacher Sprache, für dich selbst oder eine andere Person (Elternteil, Vollmacht, rechtliche Betreuung). Die Fragen stehen als JSON in `data/fragebogen/` und lassen sich ohne Programmieren ändern.
+1. **Fragen statt Formular:** ein Fragebogen in einfacher Sprache, für dich selbst oder eine andere Person (Elternteil, Vollmacht, rechtliche Betreuung). Die Fragen stehen als JSON in `data/fragebogen/`.
 2. **Zuständige Pflegekasse:** Liste aller gesetzlichen Kassen (GKV-Spitzenverband). Bei der AOK schlägt die App anhand der PLZ die regionale AOK vor. Ist eine geprüfte Anschrift im Datensatz, steht sie mit Quelle im Brief, sonst trägt man sie selbst ein.
-3. **PDF im Gerät:** Brief an die Pflegekasse mit pdf-lib, dazu ein Merkzettel: was die Formulare der Kassen danach (fast) immer abfragen – ermittelt durch einen Vergleich der Pflegeanträge von 4 Kassen.
+3. **PDF im Gerät:** Brief an die Pflegekasse mit pdf-lib, dazu ein Merkzettel: was die Formulare der Kassen danach (fast) immer abfragen – vorläufig ermittelt durch einen Vergleich der Pflegeanträge von 4 Kassen.
 
 ## Grundsätze
 

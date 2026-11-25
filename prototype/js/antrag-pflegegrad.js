@@ -84,7 +84,7 @@
   }
 
   function vorschlagHtml(w, fund) {
-    if (!String(w.kasse_name || "").trim()) return "";
+    if (!String(w.kasse_name || "").trim()) return "<p>Du hast keinen Namen eingetragen. Wähle die Kasse unten aus der Liste – oder geh einen Schritt zurück und trag den Namen ein.</p>";
     var l = fund.land, wo = l ? " für deine PLZ (" + esc(LAENDER[l]) + ")" : "";
     if (!fund.treffer.length) return "<p>Zu „" + esc(w.kasse_name) + "“ finden wir keine Kasse. Wähle sie unten aus der Liste aller Kassen.</p>";
     if (fund.eindeutig) {
@@ -106,11 +106,10 @@
     if (!w.kasse_selbst_gewaehlt && fund.eindeutig) w.kasse = fund.eindeutig.id;
     if (!w.kasse_selbst_gewaehlt && !fund.eindeutig && String(w.kasse_name || "").trim()) w.kasse = "";
     f.setzeAuswahl("kasse", kassenAuswahl(w, fund));
-    f.html.kasse_vorschlag = vorschlagHtml(w, fund);
+    // Hinweis nur, wenn nichts Passendes gefunden wurde (kein Name oder kein Treffer); sonst spricht die Vorauswahl für sich
+    f.html.kasse_vorschlag = fund.treffer.length ? "" : vorschlagHtml(w, fund);
     var i = kassenInfo(w); f.setzeVariable("anschrift_fehlt", !!i.fehlt); f.html.kasse_info = i.html;
   }
-
-  var NAMENSLISTE = ["AOK", "BKK", "IKK"].concat(KASSEN.map(kurzname).sort(function (a, b) { return a.localeCompare(b, "de"); }));
 
   function kassenInfo(w) {
     var k = kasse(w.kasse); if (!k) return { html: "", fehlt: false };
@@ -267,7 +266,6 @@
     speicherSchluessel: "adminurpsy-pilot-pflegegrad",
     vorbelegung: { plz: loc.plz || "" },
     vorSeite: function (p, f) {
-      f.setzeAuswahl("kasse_name", NAMENSLISTE);
       kasseVorbereiten(f);
       if (p.name === "fertig") f.html.zusammenfassung = zusammenfassung(f.werte);
     },
@@ -275,16 +273,15 @@
       var b = el.querySelector("#pdf"); if (b) b.addEventListener("click", function () { b.disabled = true; pdfErzeugen(f.werte).catch(function (e) { alert("PDF konnte nicht erstellt werden: " + e.message); }).then(function () { b.disabled = false; }); });
       var n = el.querySelector("#neu"); if (n) n.addEventListener("click", function () { if (n.dataset.sicher) { f.loeschen(); location.reload(); } else { n.dataset.sicher = "1"; n.textContent = "Wirklich alles löschen?"; } });
     },
-    beiAenderung: function (name, wert, f, art) {
-      if (name === "kasse") { f.werte.kasse_selbst_gewaehlt = !!wert; f.speichern(); return; }   // danach zeichnet der Abspieler die Seite neu
+    beiAenderung: function (name, wert, f) {
+      // Name und PLZ werden einfach eingetragen; der Vorschlag kommt erst auf der nächsten Seite (vorSeite → kasseVorbereiten)
+      if (name === "kasse") { f.werte.kasse_selbst_gewaehlt = !!wert; f.speichern(); return; }
       if (name === "plz" || name === "kasse_name") {
-        if (name === "plz" && wert && !/^\d{5}$/.test(wert)) return;                         // erst bei 5 Ziffern
         var suche = (f.werte.plz || "") + "|" + (f.werte.kasse_name || "");
-        if (suche === f.werte.kasse_suche) return;                                             // nichts Neues (z. B. nur Feld verlassen)
+        if (suche === f.werte.kasse_suche) return;
         f.werte.kasse_suche = suche;
         f.werte.kasse_selbst_gewaehlt = false;                                                 // neue Angabe → neuer Vorschlag
-        kasseVorbereiten(f); f.speichern();
-        f.aktualisiere(["kasse_vorschlag", "kasse", "kasse_info", "kasse_anschrift"]);         // Eingabefeld bleibt, Fokus bleibt
+        f.speichern();
       }
     }
   });

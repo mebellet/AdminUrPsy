@@ -189,8 +189,8 @@
     },
     {
       "name": "kasse",
-      "title": "Pflegekasse",
-      "description": "Die Pflegekasse gehört zur Krankenkasse der Person, die Hilfe braucht. Dorthin geht der Brief. Mit PLZ und Namen schlagen wir die passende Kasse vor.",
+      "title": "Krankenkasse",
+      "description": "Die Pflegekasse gehört zur Krankenkasse der Person, die Hilfe braucht. Dorthin geht der Brief. Im nächsten Schritt schlagen wir die passende Kasse vor.",
       "elements": [
         {
           "type": "text",
@@ -206,13 +206,19 @@
           "name": "kasse_name",
           "title": "Wie heißt die Krankenkasse?",
           "autocomplete": "off",
-          "description": "So, wie du sie kennst – zum Beispiel AOK, TK, BARMER, DAK oder IKK classic. Der Name steht auf der Versichertenkarte.",
-          "dataList": []
-        },
+          "description": "zum Beispiel AOK, TK, BARMER, DAK oder IKK classic. Der Name steht auf der Versichertenkarte."
+        }
+      ]
+    },
+    {
+      "name": "kasse_wahl",
+      "title": "Pflegekasse",
+      "elements": [
         {
           "type": "html",
           "name": "kasse_vorschlag",
-          "html": ""
+          "html": "",
+          "description": "Erscheint nur, wenn zu Name und PLZ keine passende Kasse gefunden wurde."
         },
         {
           "type": "dropdown",
@@ -220,7 +226,7 @@
           "title": "Krankenkasse",
           "isRequired": true,
           "choices": [],
-          "description": "Der Vorschlag ist schon ausgewählt. Passt er nicht, wähle eine andere. Die Liste kommt aus data/kassen.json (GKV-Spitzenverband)."
+          "description": "Vorschlag basierend auf deiner Angabe."
         },
         {
           "type": "html",

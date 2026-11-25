@@ -510,8 +510,41 @@ body.sub .band .section nav, body.sub .band nav.section { margin: 0; }
 .wiz .wiz-top .wiz-doc { margin: 0; }
 .letter-preview ul { margin: 0 0 .6rem; padding-left: 1.2rem; }
 @media (max-width: 560px) { .pilot-badge { display: none; } }   /* Platz sparen – „Pilot“ steht auch im Fuß */
-@media (max-width: 900px) { .area-strip ul { justify-content: flex-start; } }   /* sonst ist der erste Bereich beim Scrollen nicht erreichbar */
 
 /* Fragebogen: Rahmen je Feld (für Teil-Aktualisierung), ohne eigenes Layout */
 .wiz-form .feld { display: contents; }
 .wiz-info .vorschlag { font-size: 1.02rem; }
+
+/* ---------- Handy (25.11.2026): Blüte + Bereichsnamen füllen den ersten Bildschirm ----------
+   Die Namen rücken hochkant nach oben bzw. unten; der Bildausschnitt (viewBox) wird per Skript in index.html umgestellt. */
+@media (max-width: 699px) {
+  body.home .first-screen { height: calc(100vh - 5.2rem); height: calc(100svh - 5.2rem); min-height: 520px; padding-top: 1rem; padding-bottom: .5rem; }
+  body.home .flower-wrap { position: relative; }
+  body.home .flower { position: absolute; inset: 0; width: 100%; height: 100%; }
+  .flower .marke { transition: transform .2s ease; }
+  /* Blüte größer (0.74 → 1.1), Namen als Bogen über und unter der Blüte */
+  body.home .flower .logo-navy, body.home .flower .logo-top { transform: translate(400px, 400px) scale(1.1); }
+  body.home .flower .petal-hl, body.home .flower .center-link { transform: translate(400px, 400px) scale(1.486) translate(-400px, -400px); }
+  .flower .p0 .marke { transform: translateY(-160px); }
+  .flower .p1 .marke { transform: translate(-40px, -140px); }
+  .flower .p5 .marke { transform: translate(40px, -140px); }
+  .flower .p2 .marke { transform: translate(-40px, 128px); }
+  .flower .p4 .marke { transform: translate(40px, 128px); }
+  .flower .p3 .marke { transform: translateY(128px); }
+  body.home .flower .label { font-size: 30px; }
+  body.home .flower .icon { stroke-width: 2.6; }
+}
+
+/* Bereichsleiste auf dem Handy: zwei Reihen à drei statt seitlich scrollen */
+@media (max-width: 760px) {
+  .area-strip ul { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .25rem; overflow: visible; padding: .5rem .75rem; justify-content: stretch; }
+  .area-strip a { min-width: 0; padding: .4rem .25rem; font-size: .74rem; }
+  .area-strip a span { overflow-wrap: anywhere; hyphens: auto; }
+}
+
+/* Schmale Handys: Kopfzeile bleibt einzeilig */
+@media (max-width: 400px) {
+  .site-header .wrap { flex-wrap: nowrap; gap: .5rem; }
+  .wordmark { font-size: 1.6rem; gap: .4rem; }
+  .wordmark img, .wordmark svg { width: 34px; height: 34px; }
+}
