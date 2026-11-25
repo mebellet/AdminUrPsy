@@ -1,0 +1,375 @@
+{
+  "meta": {
+    "titel": "Was Pflegeanträge der Kassen abfragen (Vergleich)",
+    "stand": "2026-11-25",
+    "naechste_pruefung": "2027-05-24",
+    "erzeugt_von": "Recherche (Erstbefüllung); künftig code/pflegeantraege_vergleich.py",
+    "quellen": [
+      {
+        "name": "AOK PLUS: Antrag auf Leistungen der Pflegeversicherung",
+        "url": "https://www.aok.de/pk/magazin/cms/fileadmin/pk/plus/pdf/noindex/pflege-antrag-leistungen.pdf"
+      },
+      {
+        "name": "AOK Baden-Württemberg: Antrag auf Leistungen der Pflegeversicherung",
+        "url": "https://www.aok.de/pk/magazin/cms/fileadmin/pk/baden-wuerttemberg/pdf/noindex/antrag-leistungen-pflegeversicherung.pdf"
+      },
+      {
+        "name": "Mobil Krankenkasse: Antrag auf Leistungen der Pflegeversicherung",
+        "url": "https://mobil-krankenkasse.de/dam/jcr:fcb8e083-62b7-4a7d-94f1-7a656c0ca01a/antrag-pflegeleistungen.pdf"
+      },
+      {
+        "name": "BKK24: Antrag auf Leistungen der Pflegeversicherung",
+        "url": "https://www.bkk24.de/fileadmin/user_upload/Inhalte/Meine_BKK24/Formulare/Antrag_auf_Leistungen_der_Pflegeversicherung.pdf"
+      }
+    ],
+    "hinweis": "Erstbefüllung: Die 4 Formulare wurden am 25.11.2026 einzeln gelesen und nach den Merkmalen aus code/quellen/merkmale.json ausgewertet („teilweise“ zählt als abgefragt). Ein Lauf des Skripts ersetzt diese Datei durch die automatische Textsuche."
+  },
+  "schwelle": 0.75,
+  "formulare": [
+    {
+      "kasse_id": "aok-plus",
+      "titel": "AOK PLUS: Antrag auf Leistungen der Pflegeversicherung",
+      "url": "https://www.aok.de/pk/magazin/cms/fileadmin/pk/plus/pdf/noindex/pflege-antrag-leistungen.pdf",
+      "lesbar": true,
+      "ausfuellbare_felder": null
+    },
+    {
+      "kasse_id": "aok-baden-wuerttemberg",
+      "titel": "AOK Baden-Württemberg: Antrag auf Leistungen der Pflegeversicherung",
+      "url": "https://www.aok.de/pk/magazin/cms/fileadmin/pk/baden-wuerttemberg/pdf/noindex/antrag-leistungen-pflegeversicherung.pdf",
+      "lesbar": true,
+      "ausfuellbare_felder": null
+    },
+    {
+      "kasse_id": "betriebskrankenkasse-mobil",
+      "titel": "Mobil Krankenkasse: Antrag auf Leistungen der Pflegeversicherung",
+      "url": "https://mobil-krankenkasse.de/dam/jcr:fcb8e083-62b7-4a7d-94f1-7a656c0ca01a/antrag-pflegeleistungen.pdf",
+      "lesbar": true,
+      "ausfuellbare_felder": null
+    },
+    {
+      "kasse_id": "bkk24",
+      "titel": "BKK24: Antrag auf Leistungen der Pflegeversicherung",
+      "url": "https://www.bkk24.de/fileadmin/user_upload/Inhalte/Meine_BKK24/Formulare/Antrag_auf_Leistungen_der_Pflegeversicherung.pdf",
+      "lesbar": true,
+      "ausfuellbare_felder": null
+    }
+  ],
+  "merkmale": [
+    {
+      "id": "versichertennummer",
+      "label": "Versichertennummer",
+      "anzahl": 4,
+      "von": 4,
+      "anteil": 1.0,
+      "gemeinsam": true,
+      "gefunden_bei": [
+        "aok-plus",
+        "aok-baden-wuerttemberg",
+        "betriebskrankenkasse-mobil",
+        "bkk24"
+      ],
+      "bereithalten": "Versichertenkarte",
+      "im_formlosen_antrag": true
+    },
+    {
+      "id": "geburtsdatum",
+      "label": "Geburtsdatum",
+      "anzahl": 4,
+      "von": 4,
+      "anteil": 1.0,
+      "gemeinsam": true,
+      "gefunden_bei": [
+        "aok-plus",
+        "aok-baden-wuerttemberg",
+        "betriebskrankenkasse-mobil",
+        "bkk24"
+      ],
+      "bereithalten": "",
+      "im_formlosen_antrag": true
+    },
+    {
+      "id": "anschrift",
+      "label": "Anschrift",
+      "anzahl": 4,
+      "von": 4,
+      "anteil": 1.0,
+      "gemeinsam": true,
+      "gefunden_bei": [
+        "aok-plus",
+        "aok-baden-wuerttemberg",
+        "betriebskrankenkasse-mobil",
+        "bkk24"
+      ],
+      "bereithalten": "",
+      "im_formlosen_antrag": true
+    },
+    {
+      "id": "telefon",
+      "label": "Telefon (meist freiwillig)",
+      "anzahl": 4,
+      "von": 4,
+      "anteil": 1.0,
+      "gemeinsam": true,
+      "gefunden_bei": [
+        "aok-plus",
+        "aok-baden-wuerttemberg",
+        "betriebskrankenkasse-mobil",
+        "bkk24"
+      ],
+      "bereithalten": "",
+      "im_formlosen_antrag": true
+    },
+    {
+      "id": "antragsart",
+      "label": "Erstantrag oder Höherstufung",
+      "anzahl": 4,
+      "von": 4,
+      "anteil": 1.0,
+      "gemeinsam": true,
+      "gefunden_bei": [
+        "aok-plus",
+        "aok-baden-wuerttemberg",
+        "betriebskrankenkasse-mobil",
+        "bkk24"
+      ],
+      "bereithalten": "",
+      "im_formlosen_antrag": true
+    },
+    {
+      "id": "leistungsart",
+      "label": "Gewünschte Leistung (Geld, Pflegedienst oder beides)",
+      "anzahl": 4,
+      "von": 4,
+      "anteil": 1.0,
+      "gemeinsam": true,
+      "gefunden_bei": [
+        "aok-plus",
+        "aok-baden-wuerttemberg",
+        "betriebskrankenkasse-mobil",
+        "bkk24"
+      ],
+      "bereithalten": "Überlegen, ob du Geld (Hilfe selbst organisieren), einen Pflegedienst oder beides möchtest. Die Pflegeberatung hilft dabei.",
+      "im_formlosen_antrag": false
+    },
+    {
+      "id": "pflegeperson",
+      "label": "Angaben zur Pflegeperson (wer hilft dir privat?)",
+      "anzahl": 4,
+      "von": 4,
+      "anteil": 1.0,
+      "gemeinsam": true,
+      "gefunden_bei": [
+        "aok-plus",
+        "aok-baden-wuerttemberg",
+        "betriebskrankenkasse-mobil",
+        "bkk24"
+      ],
+      "bereithalten": "Name, Anschrift und Geburtsdatum der Person, die dir privat hilft – und wie viele Stunden pro Woche.",
+      "im_formlosen_antrag": false
+    },
+    {
+      "id": "pflegedienst",
+      "label": "Pflegedienst (falls schon einer hilft)",
+      "anzahl": 4,
+      "von": 4,
+      "anteil": 1.0,
+      "gemeinsam": true,
+      "gefunden_bei": [
+        "aok-plus",
+        "aok-baden-wuerttemberg",
+        "betriebskrankenkasse-mobil",
+        "bkk24"
+      ],
+      "bereithalten": "Name und Anschrift des Pflegedienstes, falls einer kommt.",
+      "im_formlosen_antrag": false
+    },
+    {
+      "id": "bankverbindung",
+      "label": "Bankverbindung",
+      "anzahl": 4,
+      "von": 4,
+      "anteil": 1.0,
+      "gemeinsam": true,
+      "gefunden_bei": [
+        "aok-plus",
+        "aok-baden-wuerttemberg",
+        "betriebskrankenkasse-mobil",
+        "bkk24"
+      ],
+      "bereithalten": "IBAN (Bankkarte oder Online-Banking).",
+      "im_formlosen_antrag": false
+    },
+    {
+      "id": "vertretung",
+      "label": "Bevollmächtigte Person oder rechtliche Betreuung",
+      "anzahl": 4,
+      "von": 4,
+      "anteil": 1.0,
+      "gemeinsam": true,
+      "gefunden_bei": [
+        "aok-plus",
+        "aok-baden-wuerttemberg",
+        "betriebskrankenkasse-mobil",
+        "bkk24"
+      ],
+      "bereithalten": "Vollmacht oder Betreuerausweis (Kopie).",
+      "im_formlosen_antrag": true
+    },
+    {
+      "id": "kontakt_begutachtung",
+      "label": "Ansprechperson für den Termin der Begutachtung",
+      "anzahl": 1,
+      "von": 4,
+      "anteil": 0.25,
+      "gemeinsam": false,
+      "gefunden_bei": [
+        "bkk24"
+      ],
+      "bereithalten": "",
+      "im_formlosen_antrag": true
+    },
+    {
+      "id": "aerzte",
+      "label": "Hausärztin/Hausarzt oder behandelnde Praxis",
+      "anzahl": 4,
+      "von": 4,
+      "anteil": 1.0,
+      "gemeinsam": true,
+      "gefunden_bei": [
+        "aok-plus",
+        "aok-baden-wuerttemberg",
+        "betriebskrankenkasse-mobil",
+        "bkk24"
+      ],
+      "bereithalten": "Name und Anschrift deiner Haus- und Facharztpraxis.",
+      "im_formlosen_antrag": true
+    },
+    {
+      "id": "einwilligung_befunde",
+      "label": "Einwilligung: Befunde anfordern / Schweigepflichtentbindung",
+      "anzahl": 3,
+      "von": 4,
+      "anteil": 0.75,
+      "gemeinsam": true,
+      "gefunden_bei": [
+        "aok-baden-wuerttemberg",
+        "betriebskrankenkasse-mobil",
+        "bkk24"
+      ],
+      "bereithalten": "",
+      "im_formlosen_antrag": true
+    },
+    {
+      "id": "klinik",
+      "label": "Krankenhaus- oder Reha-Aufenthalt",
+      "anzahl": 2,
+      "von": 4,
+      "anteil": 0.5,
+      "gemeinsam": false,
+      "gefunden_bei": [
+        "aok-baden-wuerttemberg",
+        "betriebskrankenkasse-mobil"
+      ],
+      "bereithalten": "Datum der Aufnahme bzw. Entlassung, falls du gerade in einer Klinik bist.",
+      "im_formlosen_antrag": false
+    },
+    {
+      "id": "andere_traeger",
+      "label": "Leistungen anderer Stellen (Sozialamt, Unfallversicherung, Versorgungsamt, Beihilfe)",
+      "anzahl": 4,
+      "von": 4,
+      "anteil": 1.0,
+      "gemeinsam": true,
+      "gefunden_bei": [
+        "aok-plus",
+        "aok-baden-wuerttemberg",
+        "betriebskrankenkasse-mobil",
+        "bkk24"
+      ],
+      "bereithalten": "Aktenzeichen, falls du von einer dieser Stellen schon Leistungen bekommst.",
+      "im_formlosen_antrag": false
+    },
+    {
+      "id": "wohnsituation",
+      "label": "Wohnsituation (zu Hause, Heim, Einrichtung)",
+      "anzahl": 4,
+      "von": 4,
+      "anteil": 1.0,
+      "gemeinsam": true,
+      "gefunden_bei": [
+        "aok-plus",
+        "aok-baden-wuerttemberg",
+        "betriebskrankenkasse-mobil",
+        "bkk24"
+      ],
+      "bereithalten": "",
+      "im_formlosen_antrag": false
+    },
+    {
+      "id": "beratung",
+      "label": "Wunsch nach Pflegeberatung",
+      "anzahl": 0,
+      "von": 4,
+      "anteil": 0.0,
+      "gemeinsam": false,
+      "gefunden_bei": [],
+      "bereithalten": "",
+      "im_formlosen_antrag": true
+    },
+    {
+      "id": "dolmetscher",
+      "label": "Dolmetscher / Sprache",
+      "anzahl": 0,
+      "von": 4,
+      "anteil": 0.0,
+      "gemeinsam": false,
+      "gefunden_bei": [],
+      "bereithalten": "",
+      "im_formlosen_antrag": false
+    },
+    {
+      "id": "unterschrift",
+      "label": "Unterschrift",
+      "anzahl": 4,
+      "von": 4,
+      "anteil": 1.0,
+      "gemeinsam": true,
+      "gefunden_bei": [
+        "aok-plus",
+        "aok-baden-wuerttemberg",
+        "betriebskrankenkasse-mobil",
+        "bkk24"
+      ],
+      "bereithalten": "",
+      "im_formlosen_antrag": true
+    },
+    {
+      "id": "aenderungen_mitteilen",
+      "label": "Pflicht, Änderungen mitzuteilen",
+      "anzahl": 0,
+      "von": 4,
+      "anteil": 0.0,
+      "gemeinsam": false,
+      "gefunden_bei": [],
+      "bereithalten": "",
+      "im_formlosen_antrag": false
+    },
+    {
+      "id": "datenschutz",
+      "label": "Datenschutzhinweis",
+      "anzahl": 4,
+      "von": 4,
+      "anteil": 1.0,
+      "gemeinsam": true,
+      "gefunden_bei": [
+        "aok-plus",
+        "aok-baden-wuerttemberg",
+        "betriebskrankenkasse-mobil",
+        "bkk24"
+      ],
+      "bereithalten": "",
+      "im_formlosen_antrag": false
+    }
+  ]
+}

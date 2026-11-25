@@ -1,0 +1,259 @@
+{
+  "meta": {
+    "titel": "Postanschriften der Pflegekassen (für Anträge von Versicherten)",
+    "stand": "2026-11-25",
+    "naechste_pruefung": "2027-02-23",
+    "erzeugt_von": "code/kassen_adressen.py",
+    "quellen": [
+      {
+        "name": "redaktionell gepflegt: code/quellen/kassen-adressen.csv (je Eintrag eigene Quelle)"
+      }
+    ],
+    "hinweis": "status „belegt“ = offizielle Postanschrift-Seite oder Pflegeantrag der Kasse; „zu_pruefen“ = indirekte Quelle; „offen“ = noch keine Anschrift, die App bittet dann um Eingabe."
+  },
+  "adressen": {
+    "aok-baden-wuerttemberg": {
+      "status": "belegt",
+      "zeilen": [
+        "Pflegekasse bei der AOK Baden-Württemberg",
+        "Posteingangsservice",
+        "70147 Stuttgart"
+      ],
+      "quelle": {
+        "url": "https://www.aok.de/pk/kontakt/postanschrift-client-bw/",
+        "art": "Postanschrift-Seite der AOK"
+      },
+      "geprueft_am": "2026-11-25",
+      "hinweis": "Postanschrift der AOK – laut AOK-FAQ an die AOK-Anschrift schicken, adressiert an die Pflegekasse"
+    },
+    "aok-bayern": {
+      "status": "offen",
+      "zeilen": [],
+      "quelle": {
+        "url": "https://www.aok.de/pk/formulare-antraege/leistungen-pflegeversicherung/",
+        "art": ""
+      },
+      "geprueft_am": "2026-11-25",
+      "hinweis": "Postanschrift-Seite war bei der Recherche nicht abrufbar"
+    },
+    "aok-bremen-bremerhaven": {
+      "status": "zu_pruefen",
+      "zeilen": [
+        "AOK Bremen/Bremerhaven, Pflegekasse",
+        "Hauptgeschäftsstelle Bremen",
+        "Postfach 10 79 63",
+        "28079 Bremen"
+      ],
+      "quelle": {
+        "url": "https://www.aok.de/pk/magazin/cms/fileadmin/pk/bremen-bremerhaven/pdf/antrag-kurzzeitpflege.pdf",
+        "art": "anderes Formular der Pflegekasse (Kurzzeitpflege)"
+      },
+      "geprueft_am": "2026-11-25",
+      "hinweis": null
+    },
+    "aok-hessen": {
+      "status": "belegt",
+      "zeilen": [
+        "Pflegekasse bei der AOK – Die Gesundheitskasse in Hessen",
+        "64520 Groß-Gerau"
+      ],
+      "quelle": {
+        "url": "https://www.aok.de/pk/kontakt/postanschrift-client-hessen/",
+        "art": "Postanschrift-Seite der AOK (ausdrücklich auch Pflegekasse)"
+      },
+      "geprueft_am": "2026-11-25",
+      "hinweis": null
+    },
+    "aok-niedersachsen": {
+      "status": "belegt",
+      "zeilen": [
+        "Pflegekasse bei der AOK Niedersachsen",
+        "30142 Hannover"
+      ],
+      "quelle": {
+        "url": "https://www.aok.de/pk/kontakt/postanschrift-client-nds/",
+        "art": "Postanschrift-Seite der AOK"
+      },
+      "geprueft_am": "2026-11-25",
+      "hinweis": "zentrales Sammelfach, Straße nicht nötig"
+    },
+    "aok-nordost": {
+      "status": "belegt",
+      "zeilen": [
+        "Pflegekasse bei der AOK Nordost – Die Gesundheitskasse",
+        "14456 Potsdam"
+      ],
+      "quelle": {
+        "url": "https://www.aok.de/pk/kontakt/postanschrift-client-no/",
+        "art": "Postanschrift-Seite der AOK"
+      },
+      "geprueft_am": "2026-11-25",
+      "hinweis": "gleiche Anschrift auf Formularen der Pflegekasse"
+    },
+    "aok-nordwest": {
+      "status": "belegt",
+      "zeilen": [
+        "Pflegekasse bei der AOK NordWest",
+        "58079 Hagen"
+      ],
+      "quelle": {
+        "url": "https://www.aok.de/pk/kontakt/postanschrift-client-nw/",
+        "art": "Postanschrift-Seite der AOK"
+      },
+      "geprueft_am": "2026-11-25",
+      "hinweis": "für Formulare und Anträge per Post"
+    },
+    "aok-plus": {
+      "status": "zu_pruefen",
+      "zeilen": [
+        "Pflegekasse bei der AOK PLUS",
+        "01058 Dresden"
+      ],
+      "quelle": {
+        "url": "https://www.aok.de/gp/fileadmin/user_upload/Pflege/Pflegeberatung/Antraege_und_Formulare/sac_anmeldung_pflegekurs.pdf",
+        "art": "anderes Formular der Pflegekasse (Pflegekurs)"
+      },
+      "geprueft_am": "2026-11-25",
+      "hinweis": "Postanschrift-Seite zeigt die Anschrift nur nach Klick"
+    },
+    "aok-rheinland-hamburg": {
+      "status": "belegt",
+      "zeilen": [
+        "Pflegekasse bei der AOK Rheinland/Hamburg",
+        "40466 Düsseldorf"
+      ],
+      "quelle": {
+        "url": "https://www.aok.de/pk/kontakt/postanschrift-client-rh/",
+        "art": "Postanschrift-Seite der AOK"
+      },
+      "geprueft_am": "2026-11-25",
+      "hinweis": null
+    },
+    "aok-rheinland-pfalz-saarland": {
+      "status": "belegt",
+      "zeilen": [
+        "Pflegekasse der AOK Rheinland-Pfalz/Saarland",
+        "56040 Koblenz"
+      ],
+      "quelle": {
+        "url": "https://www.aok.de/pk/kontakt/postanschrift-client-rps/",
+        "art": "Postanschrift-Seite der AOK"
+      },
+      "geprueft_am": "2026-11-25",
+      "hinweis": null
+    },
+    "aok-sachsen-anhalt": {
+      "status": "offen",
+      "zeilen": [],
+      "quelle": {
+        "url": "https://www.aok.de/pk/kontakt/postanschrift-client-san/",
+        "art": ""
+      },
+      "geprueft_am": "2026-11-25",
+      "hinweis": "Postanschrift-Seite zeigt die Anschrift nur nach Klick"
+    },
+    "barmer": {
+      "status": "belegt",
+      "zeilen": [
+        "BARMER Pflegekasse",
+        "42266 Wuppertal"
+      ],
+      "quelle": {
+        "url": "https://www.barmer.de/persoenliche-beratung/zentrale-postanschriften-1003548",
+        "art": "zentrale Postanschrift-Seite"
+      },
+      "geprueft_am": "2026-11-25",
+      "hinweis": "laut BARMER vollständige Postanschrift"
+    },
+    "techniker-krankenkasse": {
+      "status": "zu_pruefen",
+      "zeilen": [
+        "Techniker Krankenkasse, Pflegeversicherung",
+        "20902 Hamburg"
+      ],
+      "quelle": {
+        "url": "https://www.tk.de/leistungserbringer/personengruppen/pflegeeinrichtungen/beratungseinsaetze-2077758",
+        "art": "Seite für Leistungserbringer („Unterlagen für die Pflegeversicherung“)"
+      },
+      "geprueft_am": "2026-11-25",
+      "hinweis": "für Versicherte bestätigen"
+    },
+    "dak-gesundheit": {
+      "status": "offen",
+      "zeilen": [],
+      "quelle": {
+        "url": "https://www.dak.de/dak/ihr-anliegen/pflegeantraege-zum-herunterladen-2111538.html",
+        "art": ""
+      },
+      "geprueft_am": "2026-11-25",
+      "hinweis": "gefunden wurden nur Anschriften für Leistungserbringer"
+    },
+    "betriebskrankenkasse-mobil": {
+      "status": "belegt",
+      "zeilen": [
+        "Mobil Pflegekasse",
+        "20091 Hamburg"
+      ],
+      "quelle": {
+        "url": "https://mobil-krankenkasse.de/dam/jcr:fcb8e083-62b7-4a7d-94f1-7a656c0ca01a/antrag-pflegeleistungen.pdf",
+        "art": "Pflegeantrag der Kasse („Bitte zurück an“)"
+      },
+      "geprueft_am": "2026-11-25",
+      "hinweis": null
+    },
+    "bkk24": {
+      "status": "belegt",
+      "zeilen": [
+        "BKK24",
+        "Mainzer Str. 5",
+        "55232 Alzey"
+      ],
+      "quelle": {
+        "url": "https://www.bkk24.de/fileadmin/user_upload/Inhalte/Meine_BKK24/Formulare/Antrag_auf_Leistungen_der_Pflegeversicherung.pdf",
+        "art": "Pflegeantrag der Kasse („Zurück an“)"
+      },
+      "geprueft_am": "2026-11-25",
+      "hinweis": null
+    },
+    "energie-betriebskrankenkasse": {
+      "status": "belegt",
+      "zeilen": [
+        "Pflegekasse der energie-BKK",
+        "30134 Hannover"
+      ],
+      "quelle": {
+        "url": "https://www.energie-bkk.de/downloads/antrag_leistungen_pflegeversicherung_hoeherstufung_pflegegrad.pdf",
+        "art": "Pflegeantrag der Kasse (Höherstufung, „Rücksendung an“)"
+      },
+      "geprueft_am": "2026-11-25",
+      "hinweis": null
+    },
+    "r-und-v-betriebskrankenkasse": {
+      "status": "belegt",
+      "zeilen": [
+        "R+V Betriebskrankenkasse, Team Pflege",
+        "65215 Wiesbaden"
+      ],
+      "quelle": {
+        "url": "https://www.ruv-bkk.de/formulare/versicherte/Pflegeleistungen_Erstantrag.pdf",
+        "art": "Pflegeantrag der Kasse"
+      },
+      "geprueft_am": "2026-11-25",
+      "hinweis": null
+    },
+    "big-direkt-gesund": {
+      "status": "zu_pruefen",
+      "zeilen": [
+        "BIG direkt gesund, Pflegekasse",
+        "Rheinische Straße 1",
+        "44137 Dortmund"
+      ],
+      "quelle": {
+        "url": "https://www.big-direkt.de/sites/big-direkt-de/files/2021-12/Antrag%20auf%20ambulante%20Pflegeleistungen.pdf",
+        "art": "Kopf eines Pflegeantrags (Stand 2021)"
+      },
+      "geprueft_am": "2026-11-25",
+      "hinweis": "Formular von 2021 – Aktualität prüfen"
+    }
+  }
+}

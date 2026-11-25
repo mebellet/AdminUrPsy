@@ -1,0 +1,882 @@
+{
+  "meta": {
+    "titel": "Gesetzliche Krankenkassen und Pflegekassen",
+    "stand": "2026-11-25",
+    "naechste_pruefung": "2026-12-25",
+    "erzeugt_von": "Recherche (Erstbefüllung); künftig code/kassenliste.py",
+    "quellen": [
+      {
+        "name": "GKV-Spitzenverband: Krankenkassenliste (PDF)",
+        "url": "https://www.gkv-spitzenverband.de/krankenkassenliste.pdf",
+        "stand_der_quelle": "2026-11-24"
+      }
+    ],
+    "hinweis": "Erstbefüllung per Recherche am 25.11.2026 aus der Krankenkassenliste (Stand 24.11.2026). Wird beim nächsten Lauf von code/kassenliste.py durch die automatisch ausgelesene Liste ersetzt."
+  },
+  "kassen": [
+    {
+      "id": "aok-niedersachsen",
+      "name": "AOK - Die Gesundheitskasse für Niedersachsen",
+      "art": "AOK",
+      "webseite": "https://www.aok.de",
+      "regionen": [
+        "NI"
+      ]
+    },
+    {
+      "id": "aok-hessen",
+      "name": "AOK - Die Gesundheitskasse in Hessen",
+      "art": "AOK",
+      "webseite": "https://www.aok.de",
+      "regionen": [
+        "HE"
+      ]
+    },
+    {
+      "id": "aok-baden-wuerttemberg",
+      "name": "AOK Baden-Württemberg",
+      "art": "AOK",
+      "webseite": "https://www.aok.de",
+      "regionen": [
+        "BW"
+      ]
+    },
+    {
+      "id": "aok-bayern",
+      "name": "AOK Bayern - Die Gesundheitskasse",
+      "art": "AOK",
+      "webseite": "https://www.aok.de",
+      "regionen": [
+        "BY"
+      ]
+    },
+    {
+      "id": "aok-bremen-bremerhaven",
+      "name": "AOK Bremen / Bremerhaven",
+      "art": "AOK",
+      "webseite": "https://www.aok.de",
+      "regionen": [
+        "HB"
+      ]
+    },
+    {
+      "id": "aok-nordost",
+      "name": "AOK Nordost - Die Gesundheitskasse",
+      "art": "AOK",
+      "webseite": "https://www.aok.de",
+      "regionen": [
+        "BE",
+        "BB",
+        "MV"
+      ]
+    },
+    {
+      "id": "aok-nordwest",
+      "name": "AOK NordWest - Die Gesundheitskasse",
+      "art": "AOK",
+      "webseite": "https://www.aok.de",
+      "regionen": [
+        "NW",
+        "SH"
+      ]
+    },
+    {
+      "id": "aok-plus",
+      "name": "AOK PLUS - Die Gesundheitskasse für Sachsen und Thüringen",
+      "art": "AOK",
+      "webseite": "https://www.aok.de",
+      "regionen": [
+        "SN",
+        "TH"
+      ]
+    },
+    {
+      "id": "aok-rheinland-hamburg",
+      "name": "AOK Rheinland/Hamburg - Die Gesundheitskasse",
+      "art": "AOK",
+      "webseite": "https://www.aok.de",
+      "regionen": [
+        "HH",
+        "NW"
+      ]
+    },
+    {
+      "id": "aok-rheinland-pfalz-saarland",
+      "name": "AOK Rheinland-Pfalz/Saarland-Die Gesundheitskasse",
+      "art": "AOK",
+      "webseite": "https://www.aok.de",
+      "regionen": [
+        "RP",
+        "SL"
+      ]
+    },
+    {
+      "id": "aok-sachsen-anhalt",
+      "name": "AOK Sachsen-Anhalt - Die Gesundheitskasse",
+      "art": "AOK",
+      "webseite": "https://www.aok.de",
+      "regionen": [
+        "ST"
+      ]
+    },
+    {
+      "id": "audi-bkk",
+      "name": "Audi BKK",
+      "art": "BKK",
+      "webseite": "https://www.audibkk.de",
+      "regionen": "bundesweit"
+    },
+    {
+      "id": "bahn-bkk",
+      "name": "BAHN-BKK",
+      "art": "BKK",
+      "webseite": "https://www.bahn-bkk.de",
+      "regionen": "bundesweit"
+    },
+    {
+      "id": "barmer",
+      "name": "BARMER",
+      "art": "Ersatzkasse",
+      "webseite": "https://www.barmer.de",
+      "regionen": "bundesweit"
+    },
+    {
+      "id": "bergische-krankenkasse",
+      "name": "BERGISCHE KRANKENKASSE",
+      "art": "BKK",
+      "webseite": "https://www.bergischekrankenkasse.de",
+      "regionen": [
+        "HH",
+        "HE",
+        "NW"
+      ]
+    },
+    {
+      "id": "bertelsmann-bkk",
+      "name": "Bertelsmann BKK",
+      "art": "BKK",
+      "webseite": "https://www.bertelsmann-bkk.de",
+      "regionen": [
+        "BW",
+        "BY",
+        "BE",
+        "HH",
+        "HE",
+        "MV",
+        "NI",
+        "NW",
+        "SN",
+        "TH"
+      ]
+    },
+    {
+      "id": "betriebskrankenkasse-der-g-m-pfaff-ag",
+      "name": "Betriebskrankenkasse der G.M. Pfaff AG",
+      "art": "BKK",
+      "webseite": "https://www.bkk-pfaff.de",
+      "regionen": [
+        "RP"
+      ]
+    },
+    {
+      "id": "betriebskrankenkasse-ewe",
+      "name": "Betriebskrankenkasse EWE",
+      "art": "BKK",
+      "webseite": "https://www.bkk-ewe.de",
+      "regionen": "betriebsbezogen"
+    },
+    {
+      "id": "betriebskrankenkasse-miele",
+      "name": "Betriebskrankenkasse Miele",
+      "art": "BKK",
+      "webseite": "https://www.bkk-miele.de",
+      "regionen": "betriebsbezogen"
+    },
+    {
+      "id": "betriebskrankenkasse-mobil",
+      "name": "Betriebskrankenkasse Mobil",
+      "art": "BKK",
+      "webseite": "https://www.mobil-krankenkasse.de",
+      "regionen": "bundesweit"
+    },
+    {
+      "id": "betriebskrankenkasse-pricewaterhousecoopers",
+      "name": "Betriebskrankenkasse PricewaterhouseCoopers",
+      "art": "BKK",
+      "webseite": "https://www.bkk-pwc.de",
+      "regionen": "betriebsbezogen"
+    },
+    {
+      "id": "betriebskrankenkasse-technoform",
+      "name": "Betriebskrankenkasse Technoform",
+      "art": "BKK",
+      "webseite": "https://www.bkk-technoform.de",
+      "regionen": [
+        "BW",
+        "BY",
+        "NI",
+        "RP"
+      ]
+    },
+    {
+      "id": "big-direkt-gesund",
+      "name": "BIG direkt gesund",
+      "art": "BKK",
+      "webseite": "https://www.big-direkt.de",
+      "regionen": "bundesweit"
+    },
+    {
+      "id": "bkk-akzo-nobel-bayern",
+      "name": "BKK Akzo Nobel Bayern",
+      "art": "BKK",
+      "webseite": "https://www.bkk-akzo.de",
+      "regionen": [
+        "BY"
+      ]
+    },
+    {
+      "id": "bkk-b-braun-aesculap",
+      "name": "BKK B. Braun Aesculap",
+      "art": "BKK",
+      "webseite": "https://www.bkk-bba.de",
+      "regionen": "betriebsbezogen"
+    },
+    {
+      "id": "bkk-deutsche-bank-ag",
+      "name": "BKK Deutsche Bank AG",
+      "art": "BKK",
+      "webseite": "https://www.bkk-deutsche-bank.de",
+      "regionen": "betriebsbezogen"
+    },
+    {
+      "id": "bkk-diakonie",
+      "name": "BKK Diakonie",
+      "art": "BKK",
+      "webseite": "https://www.bkk-diakonie.de",
+      "regionen": [
+        "BW",
+        "BY",
+        "BE",
+        "BB",
+        "HB",
+        "HH",
+        "HE",
+        "MV",
+        "NI",
+        "NW",
+        "RP",
+        "SN",
+        "ST",
+        "SH"
+      ]
+    },
+    {
+      "id": "bkk-euregio",
+      "name": "BKK EUREGIO",
+      "art": "BKK",
+      "webseite": "https://www.bkk-euregio.de",
+      "regionen": [
+        "HH",
+        "NW"
+      ]
+    },
+    {
+      "id": "bkk-evm",
+      "name": "BKK evm",
+      "art": "BKK",
+      "webseite": "https://www.bkk-evm.de",
+      "regionen": "betriebsbezogen"
+    },
+    {
+      "id": "bkk-exklusiv",
+      "name": "BKK exklusiv",
+      "art": "BKK",
+      "webseite": "https://www.bkkexklusiv.de",
+      "regionen": [
+        "HB",
+        "MV",
+        "NI",
+        "NW",
+        "ST",
+        "SH"
+      ]
+    },
+    {
+      "id": "bkk-faber-castell-und-partner",
+      "name": "BKK Faber-Castell & Partner",
+      "art": "BKK",
+      "webseite": "https://www.bkk-faber-castell.de",
+      "regionen": [
+        "BY"
+      ]
+    },
+    {
+      "id": "bkk-firmus",
+      "name": "BKK firmus",
+      "art": "BKK",
+      "webseite": "https://www.bkk-firmus.de",
+      "regionen": [
+        "BW",
+        "BY",
+        "BE",
+        "HB",
+        "HH",
+        "HE",
+        "NI",
+        "NW",
+        "SN",
+        "ST"
+      ]
+    },
+    {
+      "id": "bkk-freudenberg",
+      "name": "BKK Freudenberg",
+      "art": "BKK",
+      "webseite": "https://www.bkk-freudenberg.de",
+      "regionen": [
+        "BW",
+        "BY",
+        "BE",
+        "HE",
+        "NI",
+        "NW",
+        "RP",
+        "SN"
+      ]
+    },
+    {
+      "id": "bkk-gildemeister-seidensticker",
+      "name": "BKK GILDEMEISTER SEIDENSTICKER",
+      "art": "BKK",
+      "webseite": "https://www.bkkgs.de",
+      "regionen": "bundesweit"
+    },
+    {
+      "id": "bkk-groz-beckert",
+      "name": "BKK Groz-Beckert",
+      "art": "BKK",
+      "webseite": "https://www.bkk-gb.de",
+      "regionen": "betriebsbezogen"
+    },
+    {
+      "id": "bkk-herkules",
+      "name": "BKK Herkules",
+      "art": "BKK",
+      "webseite": "https://www.bkk-herkules.de",
+      "regionen": [
+        "BY",
+        "HE",
+        "NI"
+      ]
+    },
+    {
+      "id": "bkk-linde",
+      "name": "BKK Linde",
+      "art": "BKK",
+      "webseite": "https://www.bkk-linde.de",
+      "regionen": "bundesweit"
+    },
+    {
+      "id": "bkk-mahle",
+      "name": "BKK MAHLE",
+      "art": "BKK",
+      "webseite": "https://www.bkk-mahle.de",
+      "regionen": "betriebsbezogen"
+    },
+    {
+      "id": "bkk-melitta-hmr",
+      "name": "bkk melitta hmr",
+      "art": "BKK",
+      "webseite": "https://www.bkk-melitta-hmr.de",
+      "regionen": [
+        "BW",
+        "BY",
+        "BB",
+        "HB",
+        "HE",
+        "NI",
+        "NW",
+        "SN",
+        "ST",
+        "SH"
+      ]
+    },
+    {
+      "id": "bkk-mkk-meine-krankenkasse",
+      "name": "BKK mkk - meine krankenkasse",
+      "art": "BKK",
+      "webseite": "https://www.meine-krankenkasse.de",
+      "regionen": "bundesweit"
+    },
+    {
+      "id": "bkk-mtu",
+      "name": "BKK MTU",
+      "art": "BKK",
+      "webseite": "https://www.bkk-mtu.de",
+      "regionen": "betriebsbezogen"
+    },
+    {
+      "id": "bkk-pfalz",
+      "name": "BKK Pfalz",
+      "art": "BKK",
+      "webseite": "https://www.bkkpfalz.de",
+      "regionen": "bundesweit"
+    },
+    {
+      "id": "bkk-provita",
+      "name": "BKK ProVita",
+      "art": "BKK",
+      "webseite": "https://www.bkk-provita.de",
+      "regionen": "bundesweit"
+    },
+    {
+      "id": "bkk-public",
+      "name": "BKK Public",
+      "art": "BKK",
+      "webseite": "https://www.bkk-public.de",
+      "regionen": [
+        "HH",
+        "NI",
+        "NW"
+      ]
+    },
+    {
+      "id": "bkk-rieker-ricosta-weisser",
+      "name": "BKK Rieker.RICOSTA.Weisser",
+      "art": "BKK",
+      "webseite": "https://www.bkk-rrw.de",
+      "regionen": "betriebsbezogen"
+    },
+    {
+      "id": "bkk-salzgitter",
+      "name": "BKK Salzgitter",
+      "art": "BKK",
+      "webseite": "https://www.bkk-salzgitter.de",
+      "regionen": "betriebsbezogen"
+    },
+    {
+      "id": "bkk-scheufelen",
+      "name": "BKK Scheufelen",
+      "art": "BKK",
+      "webseite": "https://www.bkk-scheufelen.de",
+      "regionen": [
+        "BW"
+      ]
+    },
+    {
+      "id": "bkk-schwarzwald-baar-heuberg",
+      "name": "BKK Schwarzwald-Baar-Heuberg",
+      "art": "BKK",
+      "webseite": "https://www.bkk-sbh.de",
+      "regionen": [
+        "BW"
+      ]
+    },
+    {
+      "id": "bkk-vdn",
+      "name": "BKK VDN",
+      "art": "BKK",
+      "webseite": "https://www.bkk-vdn.de",
+      "regionen": [
+        "HH",
+        "NW",
+        "SN"
+      ]
+    },
+    {
+      "id": "bkk-verbundplus",
+      "name": "BKK VerbundPlus",
+      "art": "BKK",
+      "webseite": "https://www.bkk-verbundplus.de",
+      "regionen": "bundesweit"
+    },
+    {
+      "id": "bkk-werra-meissner",
+      "name": "BKK WERRA-MEISSNER",
+      "art": "BKK",
+      "webseite": "https://www.bkk-werra-meissner.de",
+      "regionen": [
+        "BY",
+        "HE"
+      ]
+    },
+    {
+      "id": "bkk-wirtschaft-und-finanzen",
+      "name": "BKK WIRTSCHAFT UND FINANZEN",
+      "art": "BKK",
+      "webseite": "https://www.bkk-wf.de",
+      "regionen": [
+        "BW",
+        "BY",
+        "BE",
+        "BB",
+        "HB",
+        "HH",
+        "HE",
+        "NI",
+        "NW",
+        "RP",
+        "SL",
+        "SN"
+      ]
+    },
+    {
+      "id": "bkk-duerkoppadler",
+      "name": "BKK_DürkoppAdler",
+      "art": "BKK",
+      "webseite": "https://www.bkk-da.de",
+      "regionen": [
+        "NW"
+      ]
+    },
+    {
+      "id": "bkk24",
+      "name": "BKK24",
+      "art": "BKK",
+      "webseite": "https://www.bkk24.de",
+      "regionen": "bundesweit"
+    },
+    {
+      "id": "bkk-wuerth",
+      "name": "BKK-Würth",
+      "art": "BKK",
+      "webseite": "https://www.bkk-wuerth.de",
+      "regionen": "betriebsbezogen"
+    },
+    {
+      "id": "bmw-bkk",
+      "name": "BMW BKK",
+      "art": "BKK",
+      "webseite": "https://www.bmwbkk.de",
+      "regionen": "betriebsbezogen"
+    },
+    {
+      "id": "bosch-bkk",
+      "name": "Bosch BKK",
+      "art": "BKK",
+      "webseite": "https://www.bosch-bkk.de",
+      "regionen": [
+        "BW",
+        "BY",
+        "BE",
+        "BB",
+        "HH",
+        "HE",
+        "MV",
+        "NI",
+        "NW",
+        "RP",
+        "SL",
+        "SN",
+        "ST",
+        "TH"
+      ]
+    },
+    {
+      "id": "continentale-betriebskrankenkasse",
+      "name": "Continentale Betriebskrankenkasse",
+      "art": "BKK",
+      "webseite": "https://www.continentale-bkk.de",
+      "regionen": "bundesweit"
+    },
+    {
+      "id": "dak-gesundheit",
+      "name": "DAK-Gesundheit",
+      "art": "Ersatzkasse",
+      "webseite": "https://www.dak.de",
+      "regionen": "bundesweit"
+    },
+    {
+      "id": "debeka-bkk",
+      "name": "Debeka BKK",
+      "art": "BKK",
+      "webseite": "https://www.debeka-bkk.de",
+      "regionen": "bundesweit"
+    },
+    {
+      "id": "energie-betriebskrankenkasse",
+      "name": "energie-Betriebskrankenkasse",
+      "art": "BKK",
+      "webseite": "https://www.energie-bkk.de",
+      "regionen": "bundesweit"
+    },
+    {
+      "id": "ey-betriebskrankenkasse",
+      "name": "EY Betriebskrankenkasse",
+      "art": "BKK",
+      "webseite": "https://www.ey-bkk.de",
+      "regionen": "betriebsbezogen"
+    },
+    {
+      "id": "handelskrankenkasse-hkk",
+      "name": "Handelskrankenkasse (hkk)",
+      "art": "Ersatzkasse",
+      "webseite": "https://www.hkk.de",
+      "regionen": "bundesweit"
+    },
+    {
+      "id": "heimat-krankenkasse",
+      "name": "Heimat Krankenkasse",
+      "art": "BKK",
+      "webseite": "https://www.heimat-krankenkasse.de",
+      "regionen": "bundesweit"
+    },
+    {
+      "id": "hek-hanseatische-krankenkasse",
+      "name": "HEK - Hanseatische Krankenkasse",
+      "art": "Ersatzkasse",
+      "webseite": "https://www.hek.de",
+      "regionen": "bundesweit"
+    },
+    {
+      "id": "ikk-die-innovationskasse",
+      "name": "IKK - Die Innovationskasse",
+      "art": "IKK",
+      "webseite": "https://www.die-ik.de",
+      "regionen": "bundesweit"
+    },
+    {
+      "id": "ikk-classic",
+      "name": "IKK classic",
+      "art": "IKK",
+      "webseite": "https://www.ikk-classic.de",
+      "regionen": "bundesweit"
+    },
+    {
+      "id": "ikk-gesund-plus",
+      "name": "IKK gesund plus",
+      "art": "IKK",
+      "webseite": "https://www.ikk-gesundplus.de",
+      "regionen": "bundesweit"
+    },
+    {
+      "id": "ikk-suedwest",
+      "name": "IKK Südwest",
+      "art": "IKK",
+      "webseite": "https://www.ikk-suedwest.de",
+      "regionen": [
+        "HE",
+        "RP",
+        "SL"
+      ]
+    },
+    {
+      "id": "karl-mayer-bkk",
+      "name": "KARL MAYER BKK",
+      "art": "BKK",
+      "webseite": "https://www.karlmayer-bkk.de",
+      "regionen": "betriebsbezogen"
+    },
+    {
+      "id": "kaufmaennische-krankenkasse-kkh",
+      "name": "Kaufmännische Krankenkasse - KKH",
+      "art": "Ersatzkasse",
+      "webseite": "https://www.kkh.de",
+      "regionen": "bundesweit"
+    },
+    {
+      "id": "knappschaft",
+      "name": "KNAPPSCHAFT",
+      "art": "KBS",
+      "webseite": "https://www.knappschaft.de",
+      "regionen": "bundesweit"
+    },
+    {
+      "id": "koenig-und-bauer-bkk",
+      "name": "Koenig & Bauer BKK",
+      "art": "BKK",
+      "webseite": "https://www.koenig-bauer-bkk.de",
+      "regionen": "betriebsbezogen"
+    },
+    {
+      "id": "krones-betriebskrankenkasse",
+      "name": "Krones Betriebskrankenkasse",
+      "art": "BKK",
+      "webseite": "https://www.bkk-krones.de",
+      "regionen": "betriebsbezogen"
+    },
+    {
+      "id": "mercedes-benz-bkk",
+      "name": "Mercedes-Benz BKK",
+      "art": "BKK",
+      "webseite": "https://www.mercedes-benz-bkk.com",
+      "regionen": "betriebsbezogen"
+    },
+    {
+      "id": "merck-bkk",
+      "name": "Merck BKK",
+      "art": "BKK",
+      "webseite": "https://www.merck-bkk.de",
+      "regionen": "betriebsbezogen"
+    },
+    {
+      "id": "mhplus-betriebskrankenkasse",
+      "name": "mhplus Betriebskrankenkasse",
+      "art": "BKK",
+      "webseite": "https://www.mhplus.de",
+      "regionen": [
+        "BW",
+        "BY",
+        "BE",
+        "HB",
+        "HH",
+        "HE",
+        "MV",
+        "NI",
+        "NW",
+        "RP",
+        "SL",
+        "SN",
+        "SH",
+        "TH"
+      ]
+    },
+    {
+      "id": "novitas-bkk",
+      "name": "novitas bkk",
+      "art": "BKK",
+      "webseite": "https://www.novitas-bkk.de",
+      "regionen": "bundesweit"
+    },
+    {
+      "id": "pronova-bkk",
+      "name": "Pronova BKK",
+      "art": "BKK",
+      "webseite": "https://www.pronovabkk.de",
+      "regionen": "bundesweit"
+    },
+    {
+      "id": "r-und-v-betriebskrankenkasse",
+      "name": "R+V Betriebskrankenkasse",
+      "art": "BKK",
+      "webseite": "https://www.ruv-bkk.de",
+      "regionen": "bundesweit"
+    },
+    {
+      "id": "salus-bkk",
+      "name": "Salus BKK",
+      "art": "BKK",
+      "webseite": "https://www.salus-bkk.de",
+      "regionen": "bundesweit"
+    },
+    {
+      "id": "securvita-bkk",
+      "name": "SECURVITA BKK",
+      "art": "BKK",
+      "webseite": "https://www.securvita.de",
+      "regionen": [
+        "BW",
+        "BY",
+        "BE",
+        "BB",
+        "HH",
+        "HE",
+        "MV",
+        "NI",
+        "NW",
+        "RP",
+        "SN",
+        "ST",
+        "SH",
+        "TH"
+      ]
+    },
+    {
+      "id": "siemens-betriebskrankenkasse-sbk",
+      "name": "Siemens-Betriebskrankenkasse (SBK)",
+      "art": "BKK",
+      "webseite": "https://www.sbk.org",
+      "regionen": "bundesweit"
+    },
+    {
+      "id": "skd-bkk",
+      "name": "SKD BKK",
+      "art": "BKK",
+      "webseite": "https://www.skd-bkk.de",
+      "regionen": [
+        "BW",
+        "BY",
+        "BE",
+        "HB",
+        "HH",
+        "HE",
+        "NI",
+        "NW",
+        "SL",
+        "SN",
+        "SH"
+      ]
+    },
+    {
+      "id": "sozialversicherung-fuer-landwirtschaft-forsten-und-gartenbau-svlfg",
+      "name": "Sozialversicherung für Landwirtschaft, Forsten und Gartenbau (SVLFG)",
+      "art": "SVLFG",
+      "webseite": "https://www.svlfg.de",
+      "regionen": "branchenbezogen"
+    },
+    {
+      "id": "suedzucker-bkk",
+      "name": "Südzucker BKK",
+      "art": "BKK",
+      "webseite": "https://www.suedzucker-bkk.de",
+      "regionen": "betriebsbezogen"
+    },
+    {
+      "id": "techniker-krankenkasse",
+      "name": "Techniker Krankenkasse",
+      "art": "Ersatzkasse",
+      "webseite": "https://www.tk.de",
+      "regionen": "bundesweit"
+    },
+    {
+      "id": "tui-bkk",
+      "name": "TUI BKK",
+      "art": "BKK",
+      "webseite": "https://www.tui-bkk.de",
+      "regionen": "bundesweit"
+    },
+    {
+      "id": "viactiv-krankenkasse",
+      "name": "VIACTIV Krankenkasse",
+      "art": "BKK",
+      "webseite": "https://www.viactiv.de",
+      "regionen": "bundesweit"
+    },
+    {
+      "id": "vivida-bkk",
+      "name": "vivida bkk",
+      "art": "BKK",
+      "webseite": "https://www.vividabkk.de",
+      "regionen": "bundesweit"
+    },
+    {
+      "id": "wmf-bkk",
+      "name": "WMF BKK",
+      "art": "BKK",
+      "webseite": "https://www.wmf-bkk.de",
+      "regionen": "bundesweit"
+    },
+    {
+      "id": "zf-bkk",
+      "name": "ZF BKK",
+      "art": "BKK",
+      "webseite": "https://www.zfbkk.de",
+      "regionen": [
+        "BW",
+        "BY",
+        "BE",
+        "BB",
+        "HB",
+        "HH",
+        "HE",
+        "NI",
+        "NW",
+        "RP",
+        "SL",
+        "SN",
+        "ST",
+        "TH"
+      ]
+    }
+  ]
+}

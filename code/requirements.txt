@@ -1,0 +1,2 @@
+# Nur für die Datenpflege-Skripte (nicht für die App)
+pypdf>=4

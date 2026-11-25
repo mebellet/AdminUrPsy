@@ -1,0 +1,361 @@
+{
+  "meta": {
+    "titel": "Fragebogen: Antrag auf Pflegegrad (formlos)",
+    "stand": "2026-11-25",
+    "naechste_pruefung": "2026-12-19",
+    "erzeugt_von": "redaktionell (Pilot)",
+    "format": "SurveyJS-JSON (Teilmenge: radiogroup, checkbox, boolean, text, comment, dropdown, html; visibleIf mit =, !=, empty, notempty, and/or). Wird im Förderzeitraum mit der SurveyJS Form Library (MIT) getestet.",
+    "quellen": [
+      {
+        "name": "§ 33 SGB XI (Leistungen auf Antrag), § 18 SGB XI (Begutachtung), § 7a SGB XI (Pflegeberatung)",
+        "url": "https://www.gesetze-im-internet.de/sgb_11/"
+      },
+      {
+        "name": "Vergleich der Pflegeanträge von 4 Kassen",
+        "url": "data/pflegeantrag-merkmale.json"
+      }
+    ],
+    "hinweis": "Fachlich zu prüfen (Pflegeberatung). Rechtsstand: Gesetzentwurf Pflegeneuordnungsgesetz für 2027."
+  },
+  "title": "Pflegegrad beantragen",
+  "showQuestionNumbers": "off",
+  "pages": [
+    {
+      "name": "fuer_wen",
+      "title": "Für wen ist der Antrag?",
+      "elements": [
+        {
+          "type": "radiogroup",
+          "name": "fuer",
+          "title": "Für wen stellst du den Antrag?",
+          "defaultValue": "selbst",
+          "choices": [
+            {
+              "value": "selbst",
+              "text": "Für mich selbst"
+            },
+            {
+              "value": "andere",
+              "text": "Für eine andere Person (z. B. mein Kind)"
+            }
+          ]
+        },
+        {
+          "type": "radiogroup",
+          "name": "rolle",
+          "title": "In welcher Rolle?",
+          "visibleIf": "{fuer} = 'andere'",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "eltern",
+              "text": "Als Elternteil für mein Kind (unter 18)"
+            },
+            {
+              "value": "vollmacht",
+              "text": "Mit Vollmacht der Person"
+            },
+            {
+              "value": "betreuung",
+              "text": "Als rechtliche Betreuerin / rechtlicher Betreuer"
+            }
+          ]
+        },
+        {
+          "type": "html",
+          "name": "hinweis_vollmacht",
+          "visibleIf": "{rolle} = 'vollmacht' and {fuer} = 'andere'",
+          "html": "Leg die <b>Vollmacht</b> dem Antrag bei. (Im Pilot noch ohne eigene Vorlage.)"
+        },
+        {
+          "type": "html",
+          "name": "hinweis_betreuung",
+          "visibleIf": "{rolle} = 'betreuung' and {fuer} = 'andere'",
+          "html": "Leg eine <b>Kopie deines Betreuerausweises</b> bei."
+        },
+        {
+          "type": "radiogroup",
+          "name": "art",
+          "title": "Was soll beantragt werden?",
+          "defaultValue": "erst",
+          "choices": [
+            {
+              "value": "erst",
+              "text": "Noch kein Pflegegrad – erster Antrag"
+            },
+            {
+              "value": "hoeher",
+              "text": "Es gibt schon einen Pflegegrad – es wird mehr Hilfe gebraucht"
+            }
+          ]
+        },
+        {
+          "type": "dropdown",
+          "name": "pg_alt",
+          "title": "Welcher Pflegegrad besteht jetzt?",
+          "visibleIf": "{art} = 'hoeher'",
+          "choices": [
+            {
+              "value": "1",
+              "text": "Pflegegrad 1"
+            },
+            {
+              "value": "2",
+              "text": "Pflegegrad 2"
+            },
+            {
+              "value": "3",
+              "text": "Pflegegrad 3"
+            },
+            {
+              "value": "4",
+              "text": "Pflegegrad 4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "person",
+      "title": "Über dich",
+      "description": "Diese Angaben kommen als Absender oben in den Brief. Was du nicht weißt, bleibt leer – dann steht im PDF eine Linie zum Ausfüllen.",
+      "elements": [
+        {
+          "type": "text",
+          "name": "name",
+          "title": "Vor- und Nachname",
+          "isRequired": true,
+          "autocomplete": "name"
+        },
+        {
+          "type": "text",
+          "name": "geburt",
+          "title": "Geburtsdatum",
+          "inputType": "date",
+          "visibleIf": "{fuer} != 'andere'"
+        },
+        {
+          "type": "text",
+          "name": "strasse",
+          "title": "Straße und Hausnummer",
+          "autocomplete": "street-address"
+        },
+        {
+          "type": "text",
+          "name": "plzort",
+          "title": "PLZ und Ort",
+          "autocomplete": "postal-code"
+        },
+        {
+          "type": "text",
+          "name": "telefon",
+          "title": "Telefon",
+          "inputType": "tel",
+          "description": "freiwillig"
+        },
+        {
+          "type": "text",
+          "name": "versnr",
+          "title": "Versichertennummer",
+          "visibleIf": "{fuer} != 'andere'",
+          "description": "Steht auf der Versichertenkarte (Buchstabe und 9 Ziffern)."
+        }
+      ]
+    },
+    {
+      "name": "versicherte_person",
+      "title": "Die Person, die Hilfe braucht",
+      "visibleIf": "{fuer} = 'andere'",
+      "elements": [
+        {
+          "type": "text",
+          "name": "v_name",
+          "title": "Vor- und Nachname",
+          "isRequired": true
+        },
+        {
+          "type": "text",
+          "name": "v_geburt",
+          "title": "Geburtsdatum",
+          "inputType": "date"
+        },
+        {
+          "type": "text",
+          "name": "v_versnr",
+          "title": "Versichertennummer",
+          "description": "Steht auf der Versichertenkarte der Person."
+        }
+      ]
+    },
+    {
+      "name": "kasse",
+      "title": "Pflegekasse",
+      "description": "Die Pflegekasse gehört zur Krankenkasse der Person, die Hilfe braucht. Dorthin geht der Brief. Mit PLZ und Namen schlagen wir die passende Kasse vor.",
+      "elements": [
+        {
+          "type": "text",
+          "name": "plz",
+          "title": "Postleitzahl (Wohnort)",
+          "maxLength": 5,
+          "inputType": "text",
+          "autocomplete": "postal-code",
+          "description": "Damit wir die Kasse für deine Region vorschlagen können (z. B. die richtige AOK). Bleibt auf diesem Gerät."
+        },
+        {
+          "type": "text",
+          "name": "kasse_name",
+          "title": "Wie heißt die Krankenkasse?",
+          "autocomplete": "off",
+          "description": "So, wie du sie kennst – zum Beispiel AOK, TK, BARMER, DAK oder IKK classic. Der Name steht auf der Versichertenkarte.",
+          "dataList": []
+        },
+        {
+          "type": "html",
+          "name": "kasse_vorschlag",
+          "html": ""
+        },
+        {
+          "type": "dropdown",
+          "name": "kasse",
+          "title": "Krankenkasse",
+          "isRequired": true,
+          "choices": [],
+          "description": "Der Vorschlag ist schon ausgewählt. Passt er nicht, wähle eine andere. Die Liste kommt aus data/kassen.json (GKV-Spitzenverband)."
+        },
+        {
+          "type": "html",
+          "name": "kasse_info",
+          "html": ""
+        },
+        {
+          "type": "comment",
+          "name": "kasse_anschrift",
+          "title": "Anschrift der Pflegekasse",
+          "visibleIf": "{anschrift_fehlt} = true",
+          "description": "Für diese Kasse haben wir noch keine geprüfte Anschrift. Sie steht auf Briefen der Kasse oder auf ihrer Webseite. Du kannst sie auch später von Hand eintragen."
+        }
+      ]
+    },
+    {
+      "name": "begutachtung",
+      "title": "Die Begutachtung",
+      "description": "Nach dem Antrag prüft der Medizinische Dienst, wie viel Hilfe gebraucht wird. Meist kommt dafür jemand nach Hause.",
+      "elements": [
+        {
+          "type": "boolean",
+          "name": "psych",
+          "renderAs": "checkbox",
+          "defaultValue": true,
+          "title": "Im Antrag erwähnen, dass die Einschränkungen von einer psychischen Erkrankung kommen.",
+          "description": "Die Diagnose muss nicht genannt werden. Der Hinweis hilft, dass auf Antrieb, Ängste und Tagesstruktur geachtet wird."
+        },
+        {
+          "type": "boolean",
+          "name": "schriftlich",
+          "renderAs": "checkbox",
+          "defaultValue": true,
+          "title": "Den Termin bitte schriftlich und rechtzeitig ankündigen."
+        },
+        {
+          "type": "boolean",
+          "name": "gutachten",
+          "renderAs": "checkbox",
+          "defaultValue": true,
+          "title": "Das Gutachten zugeschickt bekommen.",
+          "description": "Wichtig, falls später ein Widerspruch nötig ist."
+        },
+        {
+          "type": "boolean",
+          "name": "beratung",
+          "renderAs": "checkbox",
+          "defaultValue": true,
+          "title": "Eine kostenlose Pflegeberatung bekommen."
+        }
+      ]
+    },
+    {
+      "name": "aerzte",
+      "title": "Ärztinnen und Ärzte",
+      "description": "Der Medizinische Dienst kann Berichte von Praxen anfordern. Das hilft – vor allem, wenn es an schlechten Tagen viel schwerer ist.",
+      "elements": [
+        {
+          "type": "radiogroup",
+          "name": "arzt",
+          "title": "Darf die Pflegekasse bzw. der Medizinische Dienst Kontakt zur Haus- oder Facharztpraxis aufnehmen?",
+          "choices": [
+            {
+              "value": "ja",
+              "text": "Ja, das ist in Ordnung."
+            },
+            {
+              "value": "fragen",
+              "text": "Nur nach Rücksprache – bitte vorher fragen."
+            },
+            {
+              "value": "nichts",
+              "text": "Dazu nichts in den Antrag schreiben."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "name": "hausarzt",
+          "title": "Hausarztpraxis",
+          "visibleIf": "{arzt} = 'ja'",
+          "description": "Name und Ort, z. B. „Dr. Weber, Aschaffenburg“"
+        },
+        {
+          "type": "text",
+          "name": "facharzt",
+          "title": "Fachärztliche Praxis (z. B. Psychiatrie)",
+          "visibleIf": "{arzt} = 'ja'"
+        }
+      ]
+    },
+    {
+      "name": "eilig",
+      "title": "Ist es eilig?",
+      "elements": [
+        {
+          "type": "radiogroup",
+          "name": "dringend",
+          "title": "Wird sehr schnell eine Entscheidung gebraucht?",
+          "defaultValue": "nein",
+          "choices": [
+            {
+              "value": "nein",
+              "text": "Nein"
+            },
+            {
+              "value": "ja",
+              "text": "Ja"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "name": "grund",
+          "title": "Warum ist es eilig?",
+          "visibleIf": "{dringend} = 'ja'",
+          "description": "z. B. „Entlassung aus der Klinik am 15.1.“ oder „Die Person, die bisher hilft, fällt aus.“"
+        },
+        {
+          "type": "html",
+          "name": "hinweis_frist",
+          "html": "<b>Wichtig für 2027:</b> Normalerweise muss die Pflegekasse in 25 Arbeitstagen entscheiden. Vom 1.1. bis 30.4.2027 gilt diese Frist laut Gesetzentwurf nicht – außer es ist besonders dringend."
+        }
+      ]
+    },
+    {
+      "name": "fertig",
+      "title": "Fertig!",
+      "elements": [
+        {
+          "type": "html",
+          "name": "zusammenfassung",
+          "html": ""
+        }
+      ]
+    }
+  ]
+}

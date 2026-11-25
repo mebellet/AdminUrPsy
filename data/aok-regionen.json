@@ -1,0 +1,67 @@
+{
+  "meta": {
+    "titel": "AOK je Bundesland (Vorschlag anhand der PLZ)",
+    "stand": "2026-11-25",
+    "naechste_pruefung": "2026-12-25",
+    "erzeugt_von": "Recherche (Erstbefüllung); künftig code/kassenliste.py",
+    "quellen": [
+      {
+        "name": "GKV-Spitzenverband: Krankenkassenliste (PDF)",
+        "url": "https://www.gkv-spitzenverband.de/krankenkassenliste.pdf",
+        "stand_der_quelle": "2026-11-24"
+      }
+    ],
+    "hinweis": "Nur ein Vorschlag: Maßgeblich ist die Kasse auf der Versichertenkarte. Gibt es in einem Land mehrere AOKs (NRW), muss die Person wählen."
+  },
+  "laender": {
+    "BW": [
+      "aok-baden-wuerttemberg"
+    ],
+    "BY": [
+      "aok-bayern"
+    ],
+    "BE": [
+      "aok-nordost"
+    ],
+    "BB": [
+      "aok-nordost"
+    ],
+    "HB": [
+      "aok-bremen-bremerhaven"
+    ],
+    "HH": [
+      "aok-rheinland-hamburg"
+    ],
+    "HE": [
+      "aok-hessen"
+    ],
+    "MV": [
+      "aok-nordost"
+    ],
+    "NI": [
+      "aok-niedersachsen"
+    ],
+    "NW": [
+      "aok-nordwest",
+      "aok-rheinland-hamburg"
+    ],
+    "RP": [
+      "aok-rheinland-pfalz-saarland"
+    ],
+    "SL": [
+      "aok-rheinland-pfalz-saarland"
+    ],
+    "SN": [
+      "aok-plus"
+    ],
+    "ST": [
+      "aok-sachsen-anhalt"
+    ],
+    "SH": [
+      "aok-nordwest"
+    ],
+    "TH": [
+      "aok-plus"
+    ]
+  }
+}

@@ -1,0 +1,23 @@
+# Postanschriften der Pflegekassen für Anträge von Versicherten – redaktionell gepflegt (Erstrecherche 25.11.2026)
+# Spalten siehe code/kassen_adressen.py. Trennzeichen ;  ·  mehrere Anschriftszeilen mit |
+# status: belegt = offizielle Postanschrift-Seite oder Pflegeantrag der Kasse · zu_pruefen = indirekte Quelle · offen = noch keine Anschrift
+kasse_id;empfaenger;anschrift;status;quelle_url;quelle_art;geprueft_am;hinweis
+aok-baden-wuerttemberg;Pflegekasse bei der AOK Baden-Württemberg;Posteingangsservice|70147 Stuttgart;belegt;https://www.aok.de/pk/kontakt/postanschrift-client-bw/;Postanschrift-Seite der AOK;2026-11-25;Postanschrift der AOK – laut AOK-FAQ an die AOK-Anschrift schicken, adressiert an die Pflegekasse
+aok-bayern;;;offen;https://www.aok.de/pk/formulare-antraege/leistungen-pflegeversicherung/;;2026-11-25;Postanschrift-Seite war bei der Recherche nicht abrufbar
+aok-bremen-bremerhaven;AOK Bremen/Bremerhaven, Pflegekasse;Hauptgeschäftsstelle Bremen|Postfach 10 79 63|28079 Bremen;zu_pruefen;https://www.aok.de/pk/magazin/cms/fileadmin/pk/bremen-bremerhaven/pdf/antrag-kurzzeitpflege.pdf;anderes Formular der Pflegekasse (Kurzzeitpflege);2026-11-25;
+aok-hessen;Pflegekasse bei der AOK – Die Gesundheitskasse in Hessen;64520 Groß-Gerau;belegt;https://www.aok.de/pk/kontakt/postanschrift-client-hessen/;Postanschrift-Seite der AOK (ausdrücklich auch Pflegekasse);2026-11-25;
+aok-niedersachsen;Pflegekasse bei der AOK Niedersachsen;30142 Hannover;belegt;https://www.aok.de/pk/kontakt/postanschrift-client-nds/;Postanschrift-Seite der AOK;2026-11-25;zentrales Sammelfach, Straße nicht nötig
+aok-nordost;Pflegekasse bei der AOK Nordost – Die Gesundheitskasse;14456 Potsdam;belegt;https://www.aok.de/pk/kontakt/postanschrift-client-no/;Postanschrift-Seite der AOK;2026-11-25;gleiche Anschrift auf Formularen der Pflegekasse
+aok-nordwest;Pflegekasse bei der AOK NordWest;58079 Hagen;belegt;https://www.aok.de/pk/kontakt/postanschrift-client-nw/;Postanschrift-Seite der AOK;2026-11-25;für Formulare und Anträge per Post
+aok-plus;Pflegekasse bei der AOK PLUS;01058 Dresden;zu_pruefen;https://www.aok.de/gp/fileadmin/user_upload/Pflege/Pflegeberatung/Antraege_und_Formulare/sac_anmeldung_pflegekurs.pdf;anderes Formular der Pflegekasse (Pflegekurs);2026-11-25;Postanschrift-Seite zeigt die Anschrift nur nach Klick
+aok-rheinland-hamburg;Pflegekasse bei der AOK Rheinland/Hamburg;40466 Düsseldorf;belegt;https://www.aok.de/pk/kontakt/postanschrift-client-rh/;Postanschrift-Seite der AOK;2026-11-25;
+aok-rheinland-pfalz-saarland;Pflegekasse der AOK Rheinland-Pfalz/Saarland;56040 Koblenz;belegt;https://www.aok.de/pk/kontakt/postanschrift-client-rps/;Postanschrift-Seite der AOK;2026-11-25;
+aok-sachsen-anhalt;;;offen;https://www.aok.de/pk/kontakt/postanschrift-client-san/;;2026-11-25;Postanschrift-Seite zeigt die Anschrift nur nach Klick
+barmer;BARMER Pflegekasse;42266 Wuppertal;belegt;https://www.barmer.de/persoenliche-beratung/zentrale-postanschriften-1003548;zentrale Postanschrift-Seite;2026-11-25;laut BARMER vollständige Postanschrift
+techniker-krankenkasse;Techniker Krankenkasse, Pflegeversicherung;20902 Hamburg;zu_pruefen;https://www.tk.de/leistungserbringer/personengruppen/pflegeeinrichtungen/beratungseinsaetze-2077758;Seite für Leistungserbringer („Unterlagen für die Pflegeversicherung“);2026-11-25;für Versicherte bestätigen
+dak-gesundheit;;;offen;https://www.dak.de/dak/ihr-anliegen/pflegeantraege-zum-herunterladen-2111538.html;;2026-11-25;gefunden wurden nur Anschriften für Leistungserbringer
+betriebskrankenkasse-mobil;Mobil Pflegekasse;20091 Hamburg;belegt;https://mobil-krankenkasse.de/dam/jcr:fcb8e083-62b7-4a7d-94f1-7a656c0ca01a/antrag-pflegeleistungen.pdf;Pflegeantrag der Kasse („Bitte zurück an“);2026-11-25;
+bkk24;BKK24;Mainzer Str. 5|55232 Alzey;belegt;https://www.bkk24.de/fileadmin/user_upload/Inhalte/Meine_BKK24/Formulare/Antrag_auf_Leistungen_der_Pflegeversicherung.pdf;Pflegeantrag der Kasse („Zurück an“);2026-11-25;
+energie-betriebskrankenkasse;Pflegekasse der energie-BKK;30134 Hannover;belegt;https://www.energie-bkk.de/downloads/antrag_leistungen_pflegeversicherung_hoeherstufung_pflegegrad.pdf;Pflegeantrag der Kasse (Höherstufung, „Rücksendung an“);2026-11-25;
+r-und-v-betriebskrankenkasse;R+V Betriebskrankenkasse, Team Pflege;65215 Wiesbaden;belegt;https://www.ruv-bkk.de/formulare/versicherte/Pflegeleistungen_Erstantrag.pdf;Pflegeantrag der Kasse;2026-11-25;
+big-direkt-gesund;BIG direkt gesund, Pflegekasse;Rheinische Straße 1|44137 Dortmund;zu_pruefen;https://www.big-direkt.de/sites/big-direkt-de/files/2021-12/Antrag%20auf%20ambulante%20Pflegeleistungen.pdf;Kopf eines Pflegeantrags (Stand 2021);2026-11-25;Formular von 2021 – Aktualität prüfen

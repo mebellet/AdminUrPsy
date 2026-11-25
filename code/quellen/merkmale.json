@@ -1,0 +1,26 @@
+{
+  "beschreibung": "Angaben, nach denen code/pflegeantraege_vergleich.py in den Pflegeanträgen der Kassen sucht. muster = reguläre Ausdrücke (klein geschrieben, ohne Silbentrennung) – trifft einer, gilt die Angabe als abgefragt. bereithalten = Hinweis für die App. im_formlosen_antrag = steckt schon im formlosen Antrag von AdminUrPsy.",
+  "merkmale": [
+    {"id": "versichertennummer", "label": "Versichertennummer", "muster": ["versichertennummer", "versicherten-?nr", "kv-?n(umme)?r"], "bereithalten": "Versichertenkarte", "im_formlosen_antrag": true},
+    {"id": "geburtsdatum", "label": "Geburtsdatum", "muster": ["geburtsdatum", "geboren am"], "bereithalten": "", "im_formlosen_antrag": true},
+    {"id": "anschrift", "label": "Anschrift", "muster": ["anschrift", "stra(ß|ss)e"], "bereithalten": "", "im_formlosen_antrag": true},
+    {"id": "telefon", "label": "Telefon (meist freiwillig)", "muster": ["telefon"], "bereithalten": "", "im_formlosen_antrag": true},
+    {"id": "antragsart", "label": "Erstantrag oder Höherstufung", "muster": ["erstantrag", "h(ö|oe)herstufung", "h(ö|oe)heren pflegegrad", "neuantrag"], "bereithalten": "", "im_formlosen_antrag": true},
+    {"id": "leistungsart", "label": "Gewünschte Leistung (Geld, Pflegedienst oder beides)", "muster": ["pflegegeld", "geldleistung", "sachleistung", "kombination"], "bereithalten": "Überlegen, ob du Geld (Hilfe selbst organisieren), einen Pflegedienst oder beides möchtest. Die Pflegeberatung hilft dabei.", "im_formlosen_antrag": false},
+    {"id": "pflegeperson", "label": "Angaben zur Pflegeperson (wer hilft dir privat?)", "muster": ["pflegeperson", "pflegende[nr]? (angeh|person)"], "bereithalten": "Name, Anschrift und Geburtsdatum der Person, die dir privat hilft – und wie viele Stunden pro Woche.", "im_formlosen_antrag": false},
+    {"id": "pflegedienst", "label": "Pflegedienst (falls schon einer hilft)", "muster": ["pflegedienst"], "bereithalten": "Name und Anschrift des Pflegedienstes, falls einer kommt.", "im_formlosen_antrag": false},
+    {"id": "bankverbindung", "label": "Bankverbindung", "muster": ["iban", "bankverbindung", "kontoinhaber", "kreditinstitut"], "bereithalten": "IBAN (Bankkarte oder Online-Banking).", "im_formlosen_antrag": false},
+    {"id": "vertretung", "label": "Bevollmächtigte Person oder rechtliche Betreuung", "muster": ["bevollm(ä|ae)chtigt", "betreuer", "gesetzliche[rn]? vertret"], "bereithalten": "Vollmacht oder Betreuerausweis (Kopie).", "im_formlosen_antrag": true},
+    {"id": "kontakt_begutachtung", "label": "Ansprechperson für den Termin der Begutachtung", "muster": ["kontaktperson", "ansprechpartner.{0,40}(begutacht|termin)", "termin.{0,40}vereinbar"], "bereithalten": "", "im_formlosen_antrag": true},
+    {"id": "aerzte", "label": "Hausärztin/Hausarzt oder behandelnde Praxis", "muster": ["hausarzt", "behandelnde[nr]? (arzt|ärzt|aerzt)"], "bereithalten": "Name und Anschrift deiner Haus- und Facharztpraxis.", "im_formlosen_antrag": true},
+    {"id": "einwilligung_befunde", "label": "Einwilligung: Befunde anfordern / Schweigepflichtentbindung", "muster": ["schweigepflicht", "fremdbefund", "befunde.{0,60}anford", "einsicht in .{0,40}(berichte|gutachten)"], "bereithalten": "", "im_formlosen_antrag": true},
+    {"id": "klinik", "label": "Krankenhaus- oder Reha-Aufenthalt", "muster": ["krankenhaus", "rehabilitation", "reha-"], "bereithalten": "Datum der Aufnahme bzw. Entlassung, falls du gerade in einer Klinik bist.", "im_formlosen_antrag": false},
+    {"id": "andere_traeger", "label": "Leistungen anderer Stellen (Sozialamt, Unfallversicherung, Versorgungsamt, Beihilfe)", "muster": ["sozialamt", "unfallversicherung", "versorgungsamt", "beihilfe"], "bereithalten": "Aktenzeichen, falls du von einer dieser Stellen schon Leistungen bekommst.", "im_formlosen_antrag": false},
+    {"id": "wohnsituation", "label": "Wohnsituation (zu Hause, Heim, Einrichtung)", "muster": ["pflegeheim", "vollstation(ä|ae)r", "behinderteneinrichtung", "wohngruppe", "heimpflege"], "bereithalten": "", "im_formlosen_antrag": false},
+    {"id": "beratung", "label": "Wunsch nach Pflegeberatung", "muster": ["beratung durch", "(wünsche|wuensche).{0,30}beratung", "beratungstermin"], "bereithalten": "", "im_formlosen_antrag": true},
+    {"id": "dolmetscher", "label": "Dolmetscher / Sprache", "muster": ["dolmetscher"], "bereithalten": "", "im_formlosen_antrag": false},
+    {"id": "unterschrift", "label": "Unterschrift", "muster": ["unterschrift"], "bereithalten": "", "im_formlosen_antrag": true},
+    {"id": "aenderungen_mitteilen", "label": "Pflicht, Änderungen mitzuteilen", "muster": ["(ä|ae)nderung(en)? der verh(ä|ae)ltnisse", "(ä|ae)nderungen.{0,60}mitzuteilen"], "bereithalten": "", "im_formlosen_antrag": false},
+    {"id": "datenschutz", "label": "Datenschutzhinweis", "muster": ["datenschutz", "datenverarbeitung"], "bereithalten": "", "im_formlosen_antrag": false}
+  ]
+}

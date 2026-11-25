@@ -1,0 +1,8 @@
+# Pflegeanträge (Erstantrag) einzelner Kassen, die verglichen werden. Trennzeichen ;
+# Nur öffentlich verlinkte PDFs. Die PDFs selbst werden NICHT ins Repository übernommen (nur in code/_cache/).
+# Weitere Kassen einfach als Zeile ergänzen – das Skript vergleicht alle Zeilen.
+kasse_id;titel;url
+aok-plus;AOK PLUS: Antrag auf Leistungen der Pflegeversicherung;https://www.aok.de/pk/magazin/cms/fileadmin/pk/plus/pdf/noindex/pflege-antrag-leistungen.pdf
+aok-baden-wuerttemberg;AOK Baden-Württemberg: Antrag auf Leistungen der Pflegeversicherung;https://www.aok.de/pk/magazin/cms/fileadmin/pk/baden-wuerttemberg/pdf/noindex/antrag-leistungen-pflegeversicherung.pdf
+betriebskrankenkasse-mobil;Mobil Krankenkasse: Antrag auf Leistungen der Pflegeversicherung;https://mobil-krankenkasse.de/dam/jcr:fcb8e083-62b7-4a7d-94f1-7a656c0ca01a/antrag-pflegeleistungen.pdf
+bkk24;BKK24: Antrag auf Leistungen der Pflegeversicherung;https://www.bkk24.de/fileadmin/user_upload/Inhalte/Meine_BKK24/Formulare/Antrag_auf_Leistungen_der_Pflegeversicherung.pdf

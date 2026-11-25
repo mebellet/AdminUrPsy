@@ -1,0 +1,37 @@
+SPDX-License-Identifier: EUPL-1.2
+
+AdminUrPsy
+Copyright (c) 2026 [NAME ODER GITHUB-NAME EINTRAGEN]
+
+Licensed under the EUPL, Version 1.2 only (the "Licence").
+You may not use this work except in compliance with the Licence.
+You may obtain a copy of the Licence at:
+
+    https://interoperable-europe.ec.europa.eu/collection/eupl/eupl-text-eupl-12
+
+The Licence is available in all official languages of the EU, including German;
+all language versions are equally valid.
+
+Unless required by applicable law or agreed to in writing, software distributed
+under the Licence is distributed on an "AS IS" basis, WITHOUT WARRANTIES OR
+CONDITIONS OF ANY KIND, either express or implied. See the Licence for the
+specific language governing permissions and limitations under the Licence.
+
+-------------------------------------------------------------------------------
+Scope / Geltungsbereich
+
+- Source code (prototype/**/*.html, *.css, *.js, code/**/*.py): EUPL-1.2
+  (the CSS files stay under EUPL-1.2 as code; the visual design they
+  express is additionally available under CC BY 4.0, see below)
+- Texts, data and design (data/**, code/quellen/**, page texts, visual design
+  such as layout, colours, icons and graphics, screenshots/**): Creative Commons Attribution 4.0 International (CC BY 4.0),
+  https://creativecommons.org/licenses/by/4.0/
+  Data in data/ is compiled from public sources named in each file's "meta"
+  block; rights of the original sources remain with their owners.
+- Excluded: the name "AdminUrPsy" and the AdminUrPsy logo, i.e. the small
+  mark next to the name (prototype/img/logo.svg and its copy in the page
+  headers). All rights reserved.
+  Not excluded: the large flower used as navigation on the start page
+  (prototype/index.html) is part of the design and available under CC BY 4.0.
+- Third-party: pdf-lib 1.17.1 (prototype/vendor/pdf-lib.min.js), MIT License,
+  see prototype/vendor/LICENSE-pdf-lib.md

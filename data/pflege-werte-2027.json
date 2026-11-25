@@ -1,0 +1,107 @@
+{
+  "meta": {
+    "titel": "Pflegeversicherung ab 1.1.2027 – Beträge, Schwellen, Fristen",
+    "stand": "2026-11-25",
+    "naechste_pruefung": "2026-12-19",
+    "erzeugt_von": "code/pflege_werte.py",
+    "quellen": [
+      {
+        "name": "Deutscher Bundestag: Anhörung zum Pflegeneuordnungsgesetz (Gesetzentwurf BT-Drucksache 21/8869)",
+        "url": "https://www.bundestag.de/ausschuesse/gesundheit/anhoerungen/1232420-1232420"
+      },
+      {
+        "name": "DAK-Gesundheit: Pflegereform 2027 (Stand 16.11.2026)",
+        "url": "https://www.dak.de/dak/leistungen/pflege/pflege-aenderungen-2027_234662"
+      },
+      {
+        "name": "pflegekompass.de: 15 Kernänderungen mit Paragrafen (Stand 14.11.2026)",
+        "url": "https://pflegekompass.de/themen/pflegereform-2027"
+      }
+    ],
+    "hinweis": "Regierungsentwurf Pflegeneuordnungsgesetz (PNOG), BT-Drucksache 21/8869 – noch nicht beschlossen. Öffentliche Anhörung im Gesundheitsausschuss am 25.11.2026, Abstimmung im Bundestag geplant am 11.12.2026, Bundesrat am 18.12.2026."
+  },
+  "entwurf": true,
+  "werte": {
+    "schwellen_punkte": {
+      "wert": {
+        "1": 15,
+        "2": 30,
+        "3": 50,
+        "4": 70,
+        "5": 90
+      },
+      "paragraf": "§ 15 Abs. 3 SGB XI-E",
+      "einheit": "Punkte (Mindestwert)"
+    },
+    "schwellen_punkte_bis_2026": {
+      "wert": {
+        "1": 12.5,
+        "2": 27,
+        "3": 47.5,
+        "4": 70,
+        "5": 90
+      },
+      "paragraf": "§ 15 Abs. 3 SGB XI",
+      "einheit": "Punkte (Mindestwert)"
+    },
+    "entlastungsbudget": {
+      "wert": {
+        "2": 380,
+        "3": 630,
+        "4": 890,
+        "5": 1080
+      },
+      "paragraf": "§ 37 SGB XI-E",
+      "einheit": "€ pro Monat",
+      "erklaerung": "Geld für selbst organisierte Hilfe, ersetzt das Pflegegeld"
+    },
+    "sachleistungsbudget": {
+      "wert": {
+        "2": 890,
+        "3": 1590,
+        "4": 2090,
+        "5": 2530
+      },
+      "paragraf": "§ 36 SGB XI-E",
+      "einheit": "€ pro Monat",
+      "erklaerung": "für zugelassene Pflege- und Betreuungsdienste"
+    },
+    "sozialraumbudget": {
+      "wert": {
+        "ab25": 175,
+        "unter25": 300
+      },
+      "paragraf": "§§ 45a, 45b SGB XI-E",
+      "einheit": "€ pro Monat",
+      "erklaerung": "für anerkannte Angebote im Alltag, nur Pflegegrad 2–5, kein Ansparen; ersetzt den Entlastungsbetrag"
+    },
+    "ueberbrueckungsbudget": {
+      "wert": 2285,
+      "paragraf": "§§ 39, 42 SGB XI-E",
+      "einheit": "€ pro Jahr"
+    },
+    "entscheidungsfrist": {
+      "wert": 25,
+      "paragraf": "SGB XI, geltende Fassung (Paragraf noch prüfen)",
+      "einheit": "Arbeitstage"
+    },
+    "fristaussetzung": {
+      "wert": {
+        "von": "2027-01-01",
+        "bis": "2027-04-30"
+      },
+      "paragraf": "§ 142b Abs. 3 SGB XI-E",
+      "erklaerung": "Entscheidungsfrist ausgesetzt, außer bei besonders dringendem Bedarf"
+    },
+    "stichtag_antragsrecht": {
+      "wert": "2026-12-31",
+      "paragraf": "§ 142b Abs. 1 SGB XI-E",
+      "erklaerung": "Es gilt das Recht am Tag der Antragstellung"
+    },
+    "widerspruchsfrist": {
+      "wert": 1,
+      "paragraf": "§ 84 SGG",
+      "einheit": "Monat nach Bekanntgabe"
+    }
+  }
+}

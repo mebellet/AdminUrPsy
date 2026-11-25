@@ -1,0 +1,5 @@
+# Zwischenspeicher der Skripte (heruntergeladene PDFs/HTML der Kassen – nicht weitergeben)
+code/_cache/
+__pycache__/
+*.pyc
+.DS_Store
